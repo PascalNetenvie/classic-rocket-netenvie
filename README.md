@@ -2,7 +2,8 @@
 # PrestaShop Classic Rocket Netenvue
 Classic Rocket is a rework of "classic theme". 2022 New version optimized and reworked by Netenvie.com.
 
-Contributed by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
+Original version by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
+Contributed by [PascalNetenvie](//www.prestarocket.com/blog/) (Twitter: [@netenvie](https://twitter.com/netenvie))
 
 Demo : [https://demoprestashop.prestarocket.com/](https://demoprestashop.prestarocket.com/)
 
