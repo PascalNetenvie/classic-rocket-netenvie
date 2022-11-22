@@ -23,7 +23,7 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 {block name='head_font'}
-  {include file="_partials/font.tpl"}
+  {include file="_partials/font-pre.tpl"}
 {/block}
 {block name='head_charset'}
   <meta charset="utf-8">
