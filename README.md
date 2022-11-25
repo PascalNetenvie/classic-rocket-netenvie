@@ -1,8 +1,8 @@
 
 # PrestaShop Classic Rocket Netenvie
-Classic Rocket is a rework of "classic theme". 2022 New version optimized and reworked by Netenvie.com.
+Classic Rocket was a rework of "classic theme" by [Prestarocket](//www.prestarocket.com/blog/). This 2022 New version is optimized and reworked by Netenvie.com to meet the latest google standards .
 
-Contributed by [PascalNetenvie](//www.netenvie.com/) (Twitter: [@netenvie](https://twitter.com/netenvie)) - Original version by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
+Contributed by [PascalNetenvie](//www.netenvie.com/) (Twitter: [@netenvie](https://twitter.com/netenvie))
 
 New features of 2022 Classic Rocket Netenvie :
 - Bootstrap udpated to 4.6.
@@ -20,7 +20,7 @@ PrestaShop 1.7.8.x
 
 
 
-## Main features of original Classic Rocket :
+## Main features of original Classic Rocket (Original version by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))) :
 - last version of Twitter Bootstrap
 - lazy loading images
 - offcanvas for main menu and filter menu
