@@ -1,12 +1,25 @@
 
-# PrestaShop Classic Rocket PascalNetenvie
+# PrestaShop Classic Rocket Netenvie
 Classic Rocket is a rework of "classic theme". 2022 New version optimized and reworked by Netenvie.com.
 
 Original version by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))
 
 Contributed by [PascalNetenvie](//www.netenvie.com/) (Twitter: [@netenvie](https://twitter.com/netenvie))
 
-Main features :
+New features of 2022 Classic Rocket Netenvie :
+- Bootstrap udpated to 4.6.
+- Images optimization for responsive and lazyloading.
+- Font loading optimized with preload.
+- Some new hooks for GTM modules.
+
+## Compatibility
+PrestaShop 1.7.8.x
+
+## Download
+- [classic-rocket-netenvie](https://github.com/PascalNetenvie/classic-rocket-netenvie/releases)
+
+
+Main features of original Classic Rocket :
 - last version of Twitter Bootstrap
 - lazy loading images
 - offcanvas for main menu and filter menu
@@ -115,17 +128,7 @@ Filter
 ```
 
 ## Compatibility
-PrestaShop 1.7.3.2 to 1.7.6.x
+PrestaShop 1.7.8.x
 
 ## Download
-- [classic-rocket](https://github.com/PrestaShop/classic-rocket/releases)
-
-## Misc
-You can also use gulp to work faster during development (gulpfile.js => gulp watch)
-
-## To do (you can help!):
-- test rtl
-- more BEM
-- add more custom scss variables
-- more data in jsonld
-- PWA
+- [classic-rocket-netenvie](https://github.com/PascalNetenvie/classic-rocket-netenvie/releases)
