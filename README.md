@@ -14,6 +14,7 @@ New features of 2022 Classic Rocket Netenvie :
 
 ## Compatibility
 PrestaShop 1.7.8.x
+Could work with previous 1.7.x versions (to be tested).
 
 ## Download
 - [classic-rocket-netenvie](https://github.com/PascalNetenvie/classic-rocket-netenvie/releases)
