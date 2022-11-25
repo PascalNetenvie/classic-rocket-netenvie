@@ -20,7 +20,7 @@ PrestaShop 1.7.8.x
 
 
 
-## Main features of original Classic Rocket (Original version by [Prestarocket](//www.prestarocket.com/blog/) (Twitter: [@prestarocket](https://twitter.com/prestarocket))) :
+## Main features of original Classic Rocket (by [Prestarocket](//www.prestarocket.com/blog/) - Twitter: [@prestarocket](https://twitter.com/prestarocket)) :
 - last version of Twitter Bootstrap
 - lazy loading images
 - offcanvas for main menu and filter menu
