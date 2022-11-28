@@ -28,7 +28,7 @@
 
             <div class="card-img-top product__card-img">
                 {block name='product_thumbnail'}
-                    <a href="{$product.url}" class="thumbnail product-thumbnail rc ratio1_1">
+                    <a href="{$product.canonical_url}" class="thumbnail product-thumbnail rc ratio1_1">
                         {if $product.cover}
                             <img
                                     data-src = "{$product.cover.bySize.home_default.url}"
@@ -63,9 +63,9 @@
                 <div class="product-description product__card-desc">
                     {block name='product_name'}
                         {if in_array($page.page_name, ['best-sales','category','manufacturer','new-products','prices-drop','product-list','search','supplier'])}
-                        <h2 class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h2>
+                        <h2 class="h3 product-title"><a href="{$product.canonical_url}">{$product.name|truncate:30:'...'}</a></h2>
                         {else}
-                            <p class="h3 product-title"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></p>
+                            <p class="h3 product-title"><a href="{$product.canonical_url}">{$product.name|truncate:30:'...'}</a></p>
                         {/if}
                     {/block}
                     {block name='product_reviews'}
