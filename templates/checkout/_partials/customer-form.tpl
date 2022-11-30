@@ -42,7 +42,7 @@
       class="continue btn btn-primary btn-lg"
       name="continue"
       data-link-action="register-new-customer"
-      type="submit"
+      type="button"
       value="1"
     >
         {l s='Continue' d='Shop.Theme.Actions'}

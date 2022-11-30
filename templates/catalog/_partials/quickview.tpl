@@ -61,7 +61,7 @@
 
                 {block name='product_refresh'}
                     {if !isset($product.product_url)}
-                    <input class="product-refresh" data-url-update="false" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}" hidden>
+                    <input class="product-refresh" data-url-update="false" name="refresh" type="button" value="{l s='Refresh' d='Shop.Theme.Actions'}" hidden>
                     {/if}
                 {/block}
             </form>

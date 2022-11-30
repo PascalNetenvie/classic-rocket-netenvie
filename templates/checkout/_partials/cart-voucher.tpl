@@ -57,7 +57,7 @@
                                 <div class="input-group">
                                     <input class="form-control" type="text" name="discount_name" placeholder="{l s='Promo code' d='Shop.Theme.Checkout'}">
                                     <div class="input-group-append">
-                                        <button type="submit" class="btn btn-primary">{l s='Add' d='Shop.Theme.Actions'}</button>
+                                        <button type="button" class="btn btn-primary">{l s='Add' d='Shop.Theme.Actions'}</button>
                                     </div>
                                 </div>
                             </form>

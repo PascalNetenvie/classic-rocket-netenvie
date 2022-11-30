@@ -52,7 +52,7 @@
       <footer class="form-footer">
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
-          <button class="btn btn-primary form-control-submit" id="submit-login" type="submit" data-link-action="sign-in">
+          <button class="btn btn-primary form-control-submit" id="submit-login" type="button" data-link-action="sign-in">
             {l s='Sign in' d='Shop.Theme.Actions'}
           </button>
         {/block}

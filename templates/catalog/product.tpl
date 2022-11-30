@@ -104,7 +104,7 @@
 
                   {block name='product_refresh'}
                       {if !isset($product.product_url)}
-                      <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">
+                      <input class="product-refresh ps-hidden-by-js" name="refresh" type="button" value="{l s='Refresh' d='Shop.Theme.Actions'}">
                       {/if}
                   {/block}
                 </form>
