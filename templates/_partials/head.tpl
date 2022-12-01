@@ -45,6 +45,13 @@
     <meta name="robots" content="none">
   {/if}
 
+  {if $preloads}
+      {foreach from=$preloads item=preload}
+         <link rel="preload" as="image" href="{$preload}" />
+      {/foreach}
+  {/if}
+  
+  
   {if $page.page_name == 'product'}
     <link rel="canonical" href="{$product.canonical_url}">
   {elseif $page.canonical}
