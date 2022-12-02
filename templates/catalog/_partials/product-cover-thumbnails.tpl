@@ -81,7 +81,6 @@
                                  sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
                                  width="320"
                                  height="320"
-                                 src="{$product.default_image.bySize.medium_default.url}"
                                  alt="{$product.default_image.legend}" title="{$product.default_image.legend}">
                         {elseif isset($urls.no_picture_image)}
                             <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
@@ -110,8 +109,8 @@
                                     alt="{$image.legend}"
                                     title="{$image.legend}"
                                     sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
-                                    width="{$product.cover.bySize.medium_default.width}"
-                                    height="{$product.cover.bySize.medium_default.height}"
+                                    width="320"
+                                    height="320"
                                     >
                                 <noscript>
                                 <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
