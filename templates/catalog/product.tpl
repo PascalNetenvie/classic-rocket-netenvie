@@ -32,14 +32,10 @@
         {block name='page_content_container'}
           <section class="page-content--product" id="content">
             {block name='page_content'}
-              {block name='product_flags'}
-                  {include file='catalog/_partials/product-flags.tpl'}
-              {/block}
 
               {block name='product_cover_thumbnails'}
                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
               {/block}
-
 
             {/block}
           </section>
