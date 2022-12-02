@@ -25,7 +25,7 @@
 <div class="images-container d-flex flex-wrap">
     {block name='product_images'}
         {if $product.images|count > 1}
-            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}3{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": true,"infinite": false}{/literal}'
+            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-slick='{literal}{"asNavFor":"[data-slick].products-imagescover","slidesToShow": {/literal}{if $product.images|count > 2}6{else}2{/if}{literal}, "slidesToScroll": 1,"focusOnSelect": true,"centerMode":false,"rows": 0,"variableWidth": false, "vertical": true, "verticalSwiping": true}{/literal}'
                  data-count="{$product.images|count}">
                 <div class="product-thumb slick-active">
                     <div class="rc">
@@ -82,8 +82,8 @@
                                  src="{$product.default_image.bySize.medium_default.url}"
                                  alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
                                  sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
-                                 width="{$product.cover.bySize.medium_default.width}"
-                                 height="{$product.cover.bySize.medium_default.height}"
+                                 width="320"
+                                 height="320"
                                  src="{$product.default_image.bySize.medium_default.url}"
                                  alt="{$product.default_image.legend}" title="{$product.default_image.legend}">
                         {elseif isset($urls.no_picture_image)}
