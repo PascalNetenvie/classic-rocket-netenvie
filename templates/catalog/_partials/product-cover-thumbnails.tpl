@@ -29,7 +29,7 @@
                 <div class="product-thumb slick-active">
                     <div class="rc">
                         <img
-                            class="thumb js-thumb img-fluid"
+                            class="thumb js-thumb lazyload img-fluid"
                             data-src="{$product.default_image.bySize.small_default.url}"
                             alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
                             width="{$product.cover.bySize.small_default.width}"
