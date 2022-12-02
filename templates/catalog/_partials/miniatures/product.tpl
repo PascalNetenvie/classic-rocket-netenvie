@@ -36,6 +36,8 @@
                                 data-src = "{$product.cover.bySize.home_default.url}"
                                 alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
                                 data-full-size-image-url = "{$product.cover.large.url}"
+                                width="{$product.cover.bySize.home_default.width}"
+                                height="{$product.cover.bySize.home_default.height}"
                                 class="lazyload"
                                 >
                         {elseif isset($urls.no_picture_image)}
@@ -49,6 +51,8 @@
                             <img
                                 data-src = "{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[1].id_image, 'home_default')}"
                                 alt = "{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
+                                width="{$product.cover.bySize.home_default.width}"
+                                height="{$product.cover.bySize.home_default.height}"
                                 class="lazyload second-cover"
                                 >
                         {/if}
