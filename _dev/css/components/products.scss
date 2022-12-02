@@ -246,6 +246,9 @@
 .product-tabs{
     .nav-tabs{
         font-size: $font-size-base * .9;
+        .nav-link {
+            cursor: pointer;
+        }
     }
     //@extend .card;
     //@extend .card-block
