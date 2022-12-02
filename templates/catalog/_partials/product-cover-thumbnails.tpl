@@ -30,7 +30,7 @@
                     <div class="">
                         <img
                             class="thumb js-thumb img-fluid"
-                            data-src="{$product.default_image.bySize.small_default.url}"
+                            src="{$product.default_image.bySize.small_default.url}"
                             alt="{$product.default_image.legend}" title="{$product.default_image.legend}"
                             width="{$product.cover.bySize.small_default.width}"
                             height="{$product.cover.bySize.small_default.height}"
