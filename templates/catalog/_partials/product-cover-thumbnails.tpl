@@ -27,7 +27,7 @@
         {if $product.images|count > 1}
             <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-count="{$product.images|count}">
                 <div class="product-thumb slick-active">
-                    <div class="rc">
+                    <div class="">
                         <img
                             class="thumb js-thumb img-fluid"
                             data-src="{$product.default_image.bySize.small_default.url}"
