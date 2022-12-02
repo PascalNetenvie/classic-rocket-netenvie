@@ -139,6 +139,9 @@
 .product-img:not(:first-child) .rc {
     display: none;
 }
+.product-img .img-fluid {
+    width: 100%;
+}
 .slick-initialized .product-img .rc{
     display: block;
 }
