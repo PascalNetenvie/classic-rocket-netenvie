@@ -45,7 +45,7 @@
                         <div class="product-thumb">
                             <div class="rc">
                                 <img
-                                    class="thumb js-thumb img-fluid"
+                                    class="thumb js-thumb lazyload img-fluid"
                                     data-src="{$image.bySize.small_default.url}"
                                     alt="{$image.legend}"
                                     title="{$image.legend}"
@@ -102,7 +102,7 @@
                         <div class="product-img">
                             <div class="rc">
                                 <img
-                                    class="img-fluid"
+                                    class="img-fluid lazyload"
                                     {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
                                     {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
                                     {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
