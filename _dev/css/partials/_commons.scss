@@ -75,6 +75,9 @@ h1,.h1{
   margin-top: -($form-group-margin-bottom/2);
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 //touch spin
 
 .bootstrap-touchspin
