@@ -81,3 +81,121 @@ $(document).ready(() => {
 document.addEventListener('lazyloaded', function(e){
     $(e.target).parent().addClass('rc--lazyload');
 });
+
+
+$( document ).ready(function() {
+    
+    console.log('ready');
+    
+    FullWidth();
+    
+    if ( ($(location).attr("pathname") != "/commande") && ($(location).attr("pathname") != "/checkout") ) {
+      sticky();
+      MobileMenuOk();
+    }
+  
+    $(window).resize(function(){
+        FullWidth();
+      if ( ($(location).attr("pathname") != "/commande") && ($(location).attr("pathname") != "/checkout") ) {
+        MobileMenuOk();
+      }
+    });
+  
+    function FullWidth() {
+        $('.fullwidth').each(function () {
+            var content = $(this);
+            var fullwidth = $('body').width(),
+                margin_full = fullwidth / 2;
+            //console.log(fullwidth);
+            //console.log(content);
+            content.css({
+                'left': '50%',
+                'position': 'relative',
+                'width': fullwidth,
+                'margin-left': -margin_full
+            });
+
+        });
+    }
+  
+    function sticky() {
+      var yourNavigation = $("#header");
+      var stickyDiv = "sticky";
+      var unStickyDiv = "unsticky";
+      var yourHeader = $('#header').height();
+      $(window).scroll(function() {
+        if( $(this).scrollTop() > (yourHeader) ) {
+          yourNavigation.addClass(stickyDiv).removeClass(unStickyDiv);
+        } else if( $(this).scrollTop() < (yourHeader) ) {
+          yourNavigation.addClass(unStickyDiv).removeClass(stickyDiv);
+        }
+      });
+    }
+  
+    function MobileMenuOk() {
+      $(".modal-dialog__offcanvas #adtm_menu").addClass("adtm_menu_toggle_open");
+      //$('#adtm_menu').toggleClass('adtm_menu_toggle_open');
+      //$('#adtm_menu .advtm_menu_toggle').toggleClass('adtm_menu_mobile_mode');
+    }
+
+
+    // Fonction pour scroller les liens vers ancres
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href*="#footer"]')
+      /*
+      .not('[href="#0"]')
+      .not('[href="#bt_tabs-0"]')
+      .not('[href="#bt_tabs-1"]')*/
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+          && 
+          location.hostname == this.hostname
+            ) {
+          // Figure out element to scroll to
+          
+          if($(this) .hasClass('nav-link')) {
+            var target = $(this).parent().parent();
+          } else {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          }
+           
+          console.log('target');
+          console.log(target);
+          console.log(target.offset().top);
+          console.log('header height');
+          console.log($('#header').height());
+          
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            //event.preventDefault();
+            
+            
+            var scrollTop = target.offset().top - $('#header').height() - 40;
+          console.log('scrollTop : ' + scrollTop);
+            
+            $('html, body').animate({
+              scrollTop: scrollTop
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              }
+            });
+          }
+        }
+    });
+
+
+});
