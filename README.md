@@ -1,6 +1,6 @@
 
 # PrestaShop Classic Rocket Netenvie
-Classic Rocket was a rework of "classic theme" by [Prestarocket](//www.prestarocket.com/blog/). This 2022 new version is optimized and reworked by Netenvie.com to meet the latest google standards.
+Classic Rocket was a rework of "classic theme" by [Prestarocket](//www.prestarocket.com/blog/). This 2022 new version is optimized and reworked by Netenvie.com to meet the latest google standards. Score is 91 to 93 on mobile and 99 to 100 on desktop.
 
 Contributed by [PascalNetenvie](//www.netenvie.com/) (Twitter: [@netenvie](https://twitter.com/netenvie))
 
