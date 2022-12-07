@@ -11,6 +11,8 @@ New features of 2022 Classic Rocket Netenvie :
 - Some new hooks for GTM modules.
 - Product link fixed with canonical in products lists.
 - Passive listeners added to more events to improve scrolling performance and Pagespeed score.
+- Jquery and Jquery UI updated.
+- Accessibility Improved.
 
 ## Compatibility
 - PrestaShop 1.7.8.x.
