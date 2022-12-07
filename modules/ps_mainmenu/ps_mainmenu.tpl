@@ -12,7 +12,7 @@
           {assign var=_counter value=$_counter+1}
 
           {if $node.children|count}
-          <span class="menu__item-header">
+          <div class="menu__item-header">
           {/if}
             <a
               class="d-md-flex w-100 h-100 {if $depth === 0}menu__item-link--top{else}menu__item-link--sub menu__item-link--{$depth}{/if} {if $node.children|count}menu__item-link--hassubmenu{else}menu__item-link--nosubmenu{/if}"
@@ -30,7 +30,7 @@
                   <i class="material-icons menu__collapseicon">&#xE313;</i>
                 </span>
               </span>
-          </span>
+          </div>
           {/if}
           {if $node.children|count}
             <div class="{if $depth === 0}menu-sub {/if}clearfix collapse show" data-collapse-hide-mobile
