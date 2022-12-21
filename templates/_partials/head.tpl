@@ -45,7 +45,7 @@
     <meta name="robots" content="none">
   {/if}
 
-  {if $preloads}
+  {if isset($preloads)}
       {foreach from=$preloads item=preload}
          <link rel="preload" as="image" href="{$preload}" />
       {/foreach}
