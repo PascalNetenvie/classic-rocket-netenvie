@@ -120,11 +120,11 @@
                     {/if}
                 {/foreach}
             </div>
-            {*if $product.default_image}
+            {if $product.default_image}
             <button type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
             <i class="material-icons zoom-in">&#xE8FF;</i>
             </button>
-            {/if*}
+            {/if}
         </div>
     {/block}
 
