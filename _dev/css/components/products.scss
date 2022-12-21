@@ -175,20 +175,31 @@
 }
 .btn-zoom{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    margin-left: -25px;
+    right: 74px;
+    left: 74px;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - 148px);
+    height: 100%;
+    
+    opacity: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
     cursor: pointer;
-    display: none;
-    padding: 0;
+    //display: none;
+    padding: 0 0 20px 0;
     line-height: 1;
     & .material-icons{
         font-size: 3*$font-size-base;
     }
 }
 .images-container:hover .btn-zoom{
-    display: block;
+    //display: block;
+    
+    opacity: 1;
 }
 .label-color{
     line-height: 1;
