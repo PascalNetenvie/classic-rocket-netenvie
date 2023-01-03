@@ -22,10 +22,17 @@
 * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
 * International Registered Trademark & Property of PrestaShop SA
 *}
+
+
+{if  isset($allImages)}
+    {assign var='allImagesCount' value=$allImages|count }   
+{else} 
+    {assign var='allImagesCount' value=0}   
+{/if}
 <div class="images-container d-flex flex-wrap">
     {block name='product_images'}
-        {if $product.images|count > 1 || $allImages|count > 1}
-            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-count="{$product.images|count + $allImages|count}">
+        {if $product.images|count > 1 || $allImagesCount > 0}
+            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-count="{$product.images|count + $allImagesCount}">
                 <div class="product-thumb slick-active">
                     <div class="">
                         <img
@@ -61,25 +68,27 @@
                     {/if}
                 {/foreach}
 
-                {foreach from=$allImages item=image}
-                    {if $image.id_image != $product.default_image.id_image}
-                        <div class="product-thumb all" id-image="{$image.id_image}">
-                            <div class="rc">
-                                <img
-                                    class="thumb js-thumb lazyload img-fluid"
-                                    data-src="{$image.bySize.small_default.url}"
-                                    alt="{$image.legend}"
-                                    title="{$image.legend}"
-                                    width="{$product.cover.bySize.small_default.width}"
-                                    height="{$product.cover.bySize.small_default.height}"
-                                    >
-                                <noscript>
-                                <img class="img-fluid" src="{$image.bySize.small_default.url}" alt="{$image.legend}">
-                                </noscript>
+                {if $allImagesCount > 0}
+                    {foreach from=$allImages item=image}
+                        {if $image.id_image != $product.default_image.id_image}
+                            <div class="product-thumb all" id-image="{$image.id_image}">
+                                <div class="rc">
+                                    <img
+                                        class="thumb js-thumb lazyload img-fluid"
+                                        data-src="{$image.bySize.small_default.url}"
+                                        alt="{$image.legend}"
+                                        title="{$image.legend}"
+                                        width="{$product.cover.bySize.small_default.width}"
+                                        height="{$product.cover.bySize.small_default.height}"
+                                        >
+                                    <noscript>
+                                    <img class="img-fluid" src="{$image.bySize.small_default.url}" alt="{$image.legend}">
+                                    </noscript>
+                                </div>
                             </div>
-                        </div>
-                    {/if}
-                {/foreach}
+                        {/if}
+                    {/foreach}
+                {/if}
 
             </div>
         {/if}
@@ -91,7 +100,7 @@
             {block name='product_flags'}
                 {include file='catalog/_partials/product-flags.tpl'}
             {/block}
-            <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImages|count}">
+            <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImagesCount}">
 
                 <div class="product-img thumbnail-container">
                     <div class="">
@@ -143,29 +152,31 @@
                     {/if}
                 {/foreach}
 
-                {foreach from=$allImages item=image   name="images"}
-                    {if $image.id_image != $product.default_image.id_image}
+                {if $allImagesCount > 0}
+                    {foreach from=$allImages item=image   name="images"}
+                        {if $image.id_image != $product.default_image.id_image}
 
-                        <div class="product-img all" id-image="{$image.id_image}">
-                            <div class="rc">
-                                <img
-                                    class="img-fluid lazyload"
-                                    {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
-                                    {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
-                                    {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
-                                    alt="{$image.legend}"
-                                    title="{$image.legend}"
-                                    sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
-                                    width="320"
-                                    height="320"
-                                    >
-                                <noscript>
-                                <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
-                                </noscript>
+                            <div class="product-img all" id-image="{$image.id_image}">
+                                <div class="rc">
+                                    <img
+                                        class="img-fluid lazyload"
+                                        {if !$smarty.foreach.images.first && !$product.default_image}data-sizes="auto"{/if}
+                                        {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
+                                        {if !$smarty.foreach.images.first && !$product.default_image}data-{/if}src="{$image.bySize.medium_default.url}"
+                                        alt="{$image.legend}"
+                                        title="{$image.legend}"
+                                        sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
+                                        width="320"
+                                        height="320"
+                                        >
+                                    <noscript>
+                                    <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
+                                    </noscript>
+                                </div>
                             </div>
-                        </div>
-                    {/if}
-                {/foreach}
+                        {/if}
+                    {/foreach}
+                {/if}
 
 
             </div>
