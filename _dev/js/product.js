@@ -36,10 +36,11 @@ $(document).ready(function () {
   
     $(".btn-zoom").hide();
     console.log('zoom');
-    var src = $('.product-img img').attr('src');
-    console.log(src);
+    //var src = $('.product-img img').attr('src');
+    //console.log(src);
     
-    $(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
+    $(".product-img img").parent().zoom();
+    //$(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
     
     //$(".product-img img").parent().zoom({url: src});
     
