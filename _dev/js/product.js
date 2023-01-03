@@ -32,20 +32,31 @@ $(document).ready(function () {
     createInputFile();
     let slickSlider = new SlickSlider();
 
-  //  $(".product-img img").parent().addClass('"zoom-box');
-  
+    //  $(".product-img img").parent().addClass('"zoom-box');
+
     $(".btn-zoom").hide();
     console.log('zoom');
     //var src = $('.product-img img').attr('src');
     //console.log(src);
-    
+/*
+    $(".product-img img").oncontextmenu = function (event) {
+        event.preventDefault();
+        event.stopPropagation(); // not necessary in my case, could leave in case stopImmediateProp isn't available? 
+        event.stopImmediatePropagation();
+        return false;
+    };
+    */
+$("body").on("contextmenu",function(e){
+     return false;
+});
+
     $(".product-img img").parent().zoom();
     //$(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
-    
+
     //$(".product-img img").parent().zoom({url: src});
-    
+
     //$("img").zoom({url:  $(this).attr('src')});
-    
+
 
     prestashop.on('updatedProduct', function (event) {
         createInputFile();
