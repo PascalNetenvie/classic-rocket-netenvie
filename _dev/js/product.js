@@ -32,6 +32,7 @@ $(document).ready(function () {
     createInputFile();
     let slickSlider = new SlickSlider();
 
+    alert(prestashop.responsive.mobile);
     if (prestashop.responsive.mobile) {
         $(".btn-zoom").hide();
         console.log('zoom');
