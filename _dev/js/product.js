@@ -25,28 +25,28 @@
 import $ from 'jquery';
 import prestashop from 'prestashop';
 import SlickSlider from './components/slick';
-
-    function absorbEvent_(event) {
-      var e = event || window.event;
-      e.preventDefault && e.preventDefault();
-      e.stopPropagation && e.stopPropagation();
-      e.cancelBubble = true;
-      e.returnValue = false;
-      return false;
-    }
-
-    function preventLongPressMenu(node) {
-    alert('preventLongPressMenu');
-      node.ontouchstart = absorbEvent_;
-      node.ontouchmove = absorbEvent_;
-      node.ontouchend = absorbEvent_;
-      node.ontouchcancel = absorbEvent_;
-    }
-
-    function init() {
-      preventLongPressMenu(document.getElementByTagName('img'));
-    }
-    
+/*
+ function absorbEvent_(event) {
+ var e = event || window.event;
+ e.preventDefault && e.preventDefault();
+ e.stopPropagation && e.stopPropagation();
+ e.cancelBubble = true;
+ e.returnValue = false;
+ return false;
+ }
+ 
+ function preventLongPressMenu(node) {
+ alert('preventLongPressMenu');
+ node.ontouchstart = absorbEvent_;
+ node.ontouchmove = absorbEvent_;
+ node.ontouchend = absorbEvent_;
+ node.ontouchcancel = absorbEvent_;
+ }
+ 
+ function init() {
+ preventLongPressMenu(document.getElementByTagName('img'));
+ }
+ */
 $(document).ready(function () {
     console.log('ready product');
     createProductSpin();
@@ -55,27 +55,29 @@ $(document).ready(function () {
 
     //  $(".product-img img").parent().addClass('"zoom-box');
 
+
     $(".btn-zoom").hide();
     console.log('zoom');
+
     //var src = $('.product-img img').attr('src');
     //console.log(src);
-/*
-    $(".product-img img").oncontextmenu = function (event) {
-        event.preventDefault();
-        event.stopPropagation(); // not necessary in my case, could leave in case stopImmediateProp isn't available? 
-        event.stopImmediatePropagation();
-        return false;
-    };
-    */
-   /*
-$("body").on("contextmenu",function(e) {
-    alert('contextmenu');
-      e.preventDefault && e.preventDefault();
-      e.stopPropagation && e.stopPropagation();
-      e.cancelBubble = true;
-      e.returnValue = false;
-      return false;
-});*/
+    /*
+     $(".product-img img").oncontextmenu = function (event) {
+     event.preventDefault();
+     event.stopPropagation(); // not necessary in my case, could leave in case stopImmediateProp isn't available? 
+     event.stopImmediatePropagation();
+     return false;
+     };
+     */
+    /*
+     $("body").on("contextmenu",function(e) {
+     alert('contextmenu');
+     e.preventDefault && e.preventDefault();
+     e.stopPropagation && e.stopPropagation();
+     e.cancelBubble = true;
+     e.returnValue = false;
+     return false;
+     });*/
 
     $(".product-img img").parent().zoom();
     //$(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
