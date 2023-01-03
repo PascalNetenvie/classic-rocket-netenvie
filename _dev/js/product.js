@@ -27,41 +27,56 @@ import prestashop from 'prestashop';
 import SlickSlider from './components/slick';
 
 $(document).ready(function () {
-  createProductSpin();
-  createInputFile();
-  let slickSlider = new SlickSlider();
+    console.log('ready product');
+    createProductSpin();
+    createInputFile();
+    let slickSlider = new SlickSlider();
 
-  prestashop.on('updatedProduct', function (event) {
-      createInputFile();
+  //  $(".product-img img").parent().addClass('"zoom-box');
+  
+    $(".btn-zoom").hide();
+    console.log('zoom');
+    var src = $('.product-img img').attr('src');
+    console.log(src);
+    
+    $(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
+    
+    //$(".product-img img").parent().zoom({url: src});
+    
+    //$("img").zoom({url:  $(this).attr('src')});
+    
 
-
-      if (event && event.product_minimal_quantity) {
-      const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
-      const quantityInputSelector = '#quantity_wanted';
-      let quantityInput = $(quantityInputSelector);
-
-      // @see http://www.virtuosoft.eu/code/bootstrap-touchspin/ about Bootstrap TouchSpin
-      quantityInput.trigger('touchspin.updatesettings', {min: minimalProductQuantity});
-    }
-    $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
-    $('.js-product-images-modal').replaceWith(event.product_images_modal);
-    slickSlider.init();
-
-
-
-  });
+    prestashop.on('updatedProduct', function (event) {
+        createInputFile();
 
 
-  function createInputFile()
-  {
-    $('.js-file-input').on('change', (event) => {
-      let target, file;
+        if (event && event.product_minimal_quantity) {
+            const minimalProductQuantity = parseInt(event.product_minimal_quantity, 10);
+            const quantityInputSelector = '#quantity_wanted';
+            let quantityInput = $(quantityInputSelector);
 
-      if ((target = $(event.currentTarget)[0]) && (file = target.files[0])) {
-        $(target).prev().text(file.name);
-      }
+            // @see http://www.virtuosoft.eu/code/bootstrap-touchspin/ about Bootstrap TouchSpin
+            quantityInput.trigger('touchspin.updatesettings', {min: minimalProductQuantity});
+        }
+        $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
+        $('.js-product-images-modal').replaceWith(event.product_images_modal);
+        slickSlider.init();
+
+
+
     });
-  }
+
+
+    function createInputFile()
+    {
+        $('.js-file-input').on('change', (event) => {
+            let target, file;
+
+            if ((target = $(event.currentTarget)[0]) && (file = target.files[0])) {
+                $(target).prev().text(file.name);
+            }
+        });
+    }
 
     function createProductSpin()
     {
@@ -86,12 +101,12 @@ $(document).ready(function () {
 
 });
 
-$(document).on('shown.bs.modal','#product-modal', function (e) {
+$(document).on('shown.bs.modal', '#product-modal', function (e) {
     $('#js-slick-product').resize();
 });
 
 //add to cart loader
-$(document).on('click','.js-add-to-cart:enabled:not(.is--loading)',function(){
+$(document).on('click', '.js-add-to-cart:enabled:not(.is--loading)', function () {
     $(this).addClass('is--loading').attr("disabled", true);
 });
 prestashop.on('updateCart', function (event) {
@@ -103,7 +118,7 @@ prestashop.on('handleError', function (event) {
     $('.js-add-to-cart').attr("disabled", false);
 
 });
-function removeAddToCartLoader(){
+function removeAddToCartLoader() {
     $('.js-add-to-cart.is--loading').removeClass('is--loading');
 
 }
