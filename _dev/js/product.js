@@ -46,9 +46,13 @@ $(document).ready(function () {
         return false;
     };
     */
-$("body").on("contextmenu",function(e){
-    alert('contextmenu');
-     return false;
+$("body").on("contextmenu",function(event) {
+      var e = event || window.event;
+      e.preventDefault && e.preventDefault();
+      e.stopPropagation && e.stopPropagation();
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
 });
 
     $(".product-img img").parent().zoom();
