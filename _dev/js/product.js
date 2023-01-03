@@ -46,8 +46,8 @@ $(document).ready(function () {
         return false;
     };
     */
-$("body").on("contextmenu",function(event) {
-      var e = event || window.event;
+$("body").on("contextmenu",function(e) {
+    alert('contextmenu');
       e.preventDefault && e.preventDefault();
       e.stopPropagation && e.stopPropagation();
       e.cancelBubble = true;
