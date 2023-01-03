@@ -154,10 +154,17 @@ $(document).ready(function () {
 
 });
 
-$(document).on('shown.bs.modal', '#product-modal', function (e) {
-    $('#js-slick-product').resize();
+$(document).on('click', '.btn-zoom', function () {
+    var idImage = $(this).data('id-image');
+    $("#product-modal img").hide();
+    $("#product-modal img#image-" + idImage).show();
 });
 
+/*
+ $(document).on('shown.bs.modal', '#product-modal', function (e) {
+ $('#js-slick-product').resize();
+ });
+ */
 //add to cart loader
 $(document).on('click', '.js-add-to-cart:enabled:not(.is--loading)', function () {
     $(this).addClass('is--loading').attr("disabled", true);

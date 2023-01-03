@@ -105,7 +105,6 @@
                 <div class="product-img thumbnail-container">
                     <div class="">
                         {if $product.default_image}
-
                             <img class="img-fluid"
                                  srcset="{$product.default_image.bySize.pdt_540.url} 680w,{$product.default_image.bySize.pdt_360.url} 360w"
                                  src="{$product.default_image.bySize.medium_default.url}"
@@ -119,13 +118,13 @@
                         {else}
                             <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
-
-
-
                         <noscript>
                         <img class="img-fluid" src="{$product.default_image.bySize.medium_default.url}" alt="{$product.default_image.legend}">
                         </noscript>
                     </div>
+                    <button  data-id-image="{$product.default_image.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                        <i class="material-icons zoom-in">&#xE8FF;</i>
+                    </button>
                 </div>
 
                 {foreach from=$product.images item=image   name="images"}
@@ -148,6 +147,9 @@
                                 <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                 </noscript>
                             </div>
+                            <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                                <i class="material-icons zoom-in">&#xE8FF;</i>
+                            </button>
                         </div>
                     {/if}
                 {/foreach}
@@ -173,6 +175,9 @@
                                     <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                     </noscript>
                                 </div>
+                                <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                                    <i class="material-icons zoom-in">&#xE8FF;</i>
+                                </button>
                             </div>
                         {/if}
                     {/foreach}
@@ -180,11 +185,6 @@
 
 
             </div>
-            {if $product.default_image}
-                <button type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
-                    <i class="material-icons zoom-in">&#xE8FF;</i>
-                </button>
-            {/if}
         </div>
     {/block}
 
