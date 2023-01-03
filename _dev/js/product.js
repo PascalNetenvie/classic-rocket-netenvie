@@ -47,6 +47,7 @@ $(document).ready(function () {
     };
     */
 $("body").on("contextmenu",function(e){
+    alert('contextmenu');
      return false;
 });
 
