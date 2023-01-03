@@ -22,6 +22,12 @@
 * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
 * International Registered Trademark & Property of PrestaShop SA
 *}
+
+{if  isset($allImages)}
+    {assign var='allImagesCount' value=$allImages|count }   
+{else} 
+    {assign var='allImagesCount' value=0}   
+{/if}
 <div class="modal fade js-product-images-modal" id="product-modal">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -29,6 +35,12 @@
                 {foreach from=$product.images item=image}
                     <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
                 {/foreach}
+                {if $allImagesCount > 0}
+                    {foreach from=$allImages item=image}
+                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+                {/foreach}
+                {/if}
+
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
