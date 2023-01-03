@@ -26,6 +26,27 @@ import $ from 'jquery';
 import prestashop from 'prestashop';
 import SlickSlider from './components/slick';
 
+    function absorbEvent_(event) {
+      var e = event || window.event;
+      e.preventDefault && e.preventDefault();
+      e.stopPropagation && e.stopPropagation();
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
+    }
+
+    function preventLongPressMenu(node) {
+    alert('preventLongPressMenu');
+      node.ontouchstart = absorbEvent_;
+      node.ontouchmove = absorbEvent_;
+      node.ontouchend = absorbEvent_;
+      node.ontouchcancel = absorbEvent_;
+    }
+
+    function init() {
+      preventLongPressMenu(document.getElementByTagName('img'));
+    }
+    
 $(document).ready(function () {
     console.log('ready product');
     createProductSpin();
@@ -46,6 +67,7 @@ $(document).ready(function () {
         return false;
     };
     */
+   /*
 $("body").on("contextmenu",function(e) {
     alert('contextmenu');
       e.preventDefault && e.preventDefault();
@@ -53,7 +75,7 @@ $("body").on("contextmenu",function(e) {
       e.cancelBubble = true;
       e.returnValue = false;
       return false;
-});
+});*/
 
     $(".product-img img").parent().zoom();
     //$(".product-img img").parent().zoom({url: 'https://netenvie-dev4.com/2/hummingbird-printed-t-shirt.jpg'});
