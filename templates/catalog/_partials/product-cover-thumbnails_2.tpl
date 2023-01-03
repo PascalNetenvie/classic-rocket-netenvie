@@ -24,8 +24,8 @@
 *}
 <div class="images-container d-flex flex-wrap">
     {block name='product_images'}
-        {if $product.images|count > 1 || $allImages|count > 1}
-            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-count="{$product.images|count + $allImages|count}">
+        {if $product.images|count > 1}
+            <div class="col-lg-2 col-12 product-thumbs js-qv-product-images visible-desktop slick__arrow-outside order-2 order-lg-1" data-count="{$product.images|count}">
                 <div class="product-thumb slick-active">
                     <div class="">
                         <img
@@ -91,7 +91,7 @@
             {block name='product_flags'}
                 {include file='catalog/_partials/product-flags.tpl'}
             {/block}
-            <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImages|count}">
+            <div class="products-imagescover mb-2" data-count="{$product.images|count}">
 
                 <div class="product-img thumbnail-container">
                     <div class="">

@@ -30,7 +30,8 @@ $(document).ready(function () {
     console.log('ready product');
     createProductSpin();
     createInputFile();
-    let slickSlider = new SlickSlider();
+    //let slickSlider = new SlickSlider();
+    slickSliderProductInit();
 
 
     if (prestashop.responsive.mobile) {
@@ -40,6 +41,7 @@ $(document).ready(function () {
     }
 
     prestashop.on('updatedProduct', function (event) {
+        console.log('updatedProduct');
         createInputFile();
 
 
@@ -53,12 +55,70 @@ $(document).ready(function () {
         }
         $($('.tabs .nav-link.active').attr('href')).addClass('active').removeClass('fade');
         $('.js-product-images-modal').replaceWith(event.product_images_modal);
-        slickSlider.init();
-
-
-
+        // slickSlider.init();
+        slickSliderProductInit();
     });
 
+
+    function slickSliderProductInit()
+    {
+        console.log('slickSliderProductInit');
+
+        $('.product-thumbs').slick({
+            asNavFor: '.products-imagescover',
+            prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow"><i class="material-icons">expand_less</i></button>',
+            nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow"><i class="material-icons">expand_more</i></button>',
+            dots: false,
+            infinite: true,
+            speed: 300,
+            rows: 0,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            "focusOnSelect": true,
+            vertical: true,
+            verticalSwiping: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                        vertical: false,
+                        verticalSwiping: false,
+                        prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow"><i class="material-icons">chevron_left</i></button>',
+                        nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow"><i class="material-icons">chevron_right</i></button>'
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        vertical: false,
+                        verticalSwiping: false,
+                        prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow"><i class="material-icons">chevron_left</i></button>',
+                        nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow"><i class="material-icons">chevron_right</i></button>'
+                    }
+                }
+            ]
+        });
+        $('.products-imagescover').slick({
+            asNavFor: '.product-thumbs',
+            prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow"><i class="material-icons">chevron_left</i></button>',
+            nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow"><i class="material-icons">chevron_right</i></button>',
+            dots: false,
+            infinite: true,
+            speed: 300,
+            rows: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            vertical: false,
+            verticalSwiping: false,
+        });
+
+
+
+    }
 
     function createInputFile()
     {
