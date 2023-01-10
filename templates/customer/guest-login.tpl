@@ -76,7 +76,7 @@
     </section>
 
     <footer class="form-footer">
-      <button class="btn btn-primary" type="button">
+      <button class="btn btn-primary" type="submit">
         {l s='Send' d='Shop.Theme.Actions'}
       </button>
     </footer>
