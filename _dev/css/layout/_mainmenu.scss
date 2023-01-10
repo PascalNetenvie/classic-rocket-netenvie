@@ -27,8 +27,8 @@
     left: 0;
     top: 100%;
     z-index: -2;
-    transition: opacity .5s ease;
-    display: none;
+    transition: visibility 0s, opacity .5s ease;
+    visibility: hidden;
   }
   .menu-sub__content > ul {
     padding: 10px;
@@ -36,7 +36,7 @@
     box-shadow: $box-shadow;
   }
   .menu__item--active .menu-sub {
-    display: block;
+    visibility: visible;
     z-index: 2;
     opacity: 1;
   }
