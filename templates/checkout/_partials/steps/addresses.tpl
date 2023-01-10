@@ -137,7 +137,7 @@
 
       {if !$form_has_continue_button}
         <div class="clearfix">
-          <button type="submit" class="btn btn-primary btn-lg continue" name="confirm-addresses" value="1">
+          <button type="button" class="btn btn-primary btn-lg continue" name="confirm-addresses" value="1">
               {l s='Continue' d='Shop.Theme.Actions'}
           </button>
           <input type="hidden" id="not-valid-addresses" value="{$not_valid_addresses}">
