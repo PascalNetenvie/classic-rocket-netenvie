@@ -27,7 +27,7 @@
     left: 0;
     top: 100%;
     z-index: -2;
-    transition: all .5s ease;
+    transition: opacity .5s ease;
     display: none;
   }
   .menu-sub__content > ul {
