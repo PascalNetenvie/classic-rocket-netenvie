@@ -177,11 +177,10 @@
     position: absolute;
     right: 74px;
     left: 74px;
-    top: 0;
     bottom: 0;
     width: calc(100% - 148px);
     height: 100%;
-    
+
     opacity: 0;
 
     display: flex;
@@ -196,9 +195,19 @@
         font-size: 3*$font-size-base;
     }
 }
+.label-zoom {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+
+    @include media-breakpoint-desktop {
+        display: none;
+    }
+
+}
 .images-container:hover .btn-zoom{
     //display: block;
-    
+
     opacity: 1;
 }
 .label-color{
