@@ -311,10 +311,10 @@ input[type="number"] {
     margin-bottom: 0;
     line-height: rem(26px);
     i {
-    top: 4px;
-    position: relative;
+        top: 4px;
+        position: relative;
     }
-        
+
 }
 .-complete.-reachable .step-title .done {
     display: inline-block;
@@ -324,7 +324,9 @@ input[type="number"] {
 }
 .-current .card-header{
     background-color: $primary;
-    color: white;
+    .step-title {
+        color: white;
+    }
 }
 .card-body {
     padding: 2.25rem;
