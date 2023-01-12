@@ -431,6 +431,10 @@ custom-file-label.selected:after{
     .nav-link{
         color:$gray-600;
         font-weight: 700;
+        padding: .5rem 0.7rem;
+        @include media-breakpoint-desktop{
+            padding: .5rem 1rem;
+        }
     }
     .nav-link.active,
     .nav-item.show .nav-link {
