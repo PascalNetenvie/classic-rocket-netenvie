@@ -112,7 +112,6 @@
                         {hook h='displayReassurance'}
                     {/block}
 
-
                     {block name='product_tabs'}
                         <div class="d-block d-md-none">
                             {include file='catalog/_partials/product-tabs-mobile.tpl'}
@@ -121,8 +120,6 @@
                             {include file='catalog/_partials/product-tabs.tpl'}
                         </div>
                     {/block}
-
-
 
                 </div>
             </div>
