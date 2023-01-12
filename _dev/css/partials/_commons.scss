@@ -322,9 +322,10 @@ input[type="number"] {
 .-current .step-title .done {
     visibility: hidden;
 }
-.-current .card-header{
+.-current-step .card-header{
     background-color: $primary;
     .step-title {
+        cursor: pointer;
         color: white;
     }
 }
