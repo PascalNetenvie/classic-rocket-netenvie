@@ -311,7 +311,8 @@ input[type="number"] {
     margin-bottom: 0;
     line-height: rem(26px);
     i {
-        top:3px;
+    top: 4px;
+    position: relative;
     }
         
 }
@@ -323,6 +324,7 @@ input[type="number"] {
 }
 .-current .card-header{
     background-color: $primary;
+    color: white;
 }
 .card-body {
     padding: 2.25rem;
