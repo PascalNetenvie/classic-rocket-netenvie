@@ -32,14 +32,14 @@
                         'js-current-step' => $step_is_current
                     ]|classnames} card"
               >
-        <div class="card-header js-checkout-step-header" id="heading-{$identifier}" data-identifier="{$identifier}">
+        <div class="card-header js-checkout-step-header" id="heading-{$identifier}" data-toggle="collapse" data-target="#content-{$identifier}" aria-expanded="{if $step_is_current}true{else}false{/if}" aria-controls="content-{$identifier}">
             <h1 class="step-title h3">
                 <i class="material-icons rtl-no-flip done text-success">&#xE876;</i>
                 <span class="step-number">{$position}</span>
                 {$title}
 
                 {if $step_is_reachable}
-                    <button class="step-edit btn btn-sm btn-primary btn-inverted float-right" data-toggle="collapse" data-target="#content-{$identifier}" aria-expanded="{if $step_is_current}true{else}false{/if}" aria-controls="content-{$identifier}">
+                    <button class="step-edit btn btn-sm btn-primary btn-inverted float-right">
                         {l s='Edit' d='Shop.Theme.Actions'}
                     </button>
                 {/if}
