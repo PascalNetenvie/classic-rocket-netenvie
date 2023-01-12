@@ -36,7 +36,17 @@
             <h1 class="step-title h3">
                 <i class="material-icons rtl-no-flip done text-success">&#xE876;</i>
                 <span class="step-number">{$position}</span>
-                {$title}
+
+                {if $title == 'Informations personnelles'}
+                    <span class="d-inline d-md-none">
+                        Informations perso.
+                    </span>
+                    <span class="d-none d-md-inline">
+                        {$title}
+                    </span>
+                {else}
+                    {$title}
+                {/if}
 
                 {if $step_is_reachable}
                     <button class="step-edit btn btn-sm btn-primary btn-inverted float-right">

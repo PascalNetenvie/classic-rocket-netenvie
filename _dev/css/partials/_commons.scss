@@ -323,13 +323,14 @@ input[type="number"] {
 .-complete.-reachable .step-title .done {
     display: inline-block;
 }
-.-current .step-title .done {
-    visibility: hidden;
-}
 .card-header[aria-expanded="true"]{
     background-color: $primary;
+    color: white;
     .step-title {
         color: white;
+        .done {
+            visibility: hidden;
+        }
     }
 }
 .card-body {
