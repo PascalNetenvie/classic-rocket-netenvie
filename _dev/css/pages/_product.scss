@@ -11,7 +11,14 @@
     }
 }
 .product-tabs {
-    .card-header {
+    .card-header,  .card-body {
         padding: 1.25rem 1.25rem;
+    }
+    .card-header{
+    }
+    .card-body {
+        .fade {
+            opacity: 1;
+        }
     }
 }
