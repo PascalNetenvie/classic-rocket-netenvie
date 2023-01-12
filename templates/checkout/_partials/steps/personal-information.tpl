@@ -37,7 +37,7 @@
         <button
                 class="continue btn btn-primary btn-lg"
                 name="controller"
-                type="button"
+                type="submit"
                 value="order"
         >
             {l s='Continue' d='Shop.Theme.Actions'}
