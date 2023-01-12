@@ -35,6 +35,7 @@
     {include file='_partials/pagination.tpl' pagination=$listing.pagination}
   {/block}
 
+  
   <div class="visible--mobile mt-3 mt-lg-0 up">
     <a href="#header" class="btn btn-secondary">
       {l s='Back to top' d='Shop.Theme.Actions'}
