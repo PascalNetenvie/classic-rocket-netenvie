@@ -11,7 +11,7 @@
 //  }
 //}
 #checkout #wrapper, #cart #wrapper {
-    padding-top: $spacer;
+    padding-top: rem(40px);
 }
 .product-line-actions{
   display:flex;
