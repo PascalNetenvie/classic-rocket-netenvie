@@ -292,7 +292,7 @@ input[type="number"] {
 
 /* CHECKOUT STEP */
 .address-header, .card-header, .page-header {
-    padding: 0.25rem 1.25rem;
+    padding: 1.25rem 0.25rem ;
     h1 {
         i {
             font-size: 1.25rem;
@@ -308,6 +308,7 @@ input[type="number"] {
 }
 .step-title
 {
+    cursor: pointer;
     margin-bottom: 0;
     line-height: rem(26px);
     i {
@@ -315,6 +316,9 @@ input[type="number"] {
         position: relative;
     }
 
+    @include media-breakpoint-mobile{
+        font-size: 0.9rem;
+    }
 }
 .-complete.-reachable .step-title .done {
     display: inline-block;
@@ -325,7 +329,6 @@ input[type="number"] {
 .card-header[aria-expanded="true"]{
     background-color: $primary;
     .step-title {
-        cursor: pointer;
         color: white;
     }
 }

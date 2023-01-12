@@ -10,20 +10,6 @@
                 {if $product.description} aria-selected="true"{/if}>{l s='Description' d='Shop.Theme.Catalog'}</a>
 
         {/if}
-
-        {if isset($otherDescriptions)}
-            {foreach from=$otherDescriptions item=description key=extraKey}
-
-                <a
-                    class="nav-link"
-                    data-toggle="tab"
-                    href="#description{$extraKey}"
-                    role="tab"
-                    aria-controls="description{$extraKey}"
-                    >{$description[0]}</a>
-            {/foreach}
-        {/if}
-
         <a
             class="nav-link{if !$product.description} active{/if}"
             data-toggle="tab"
@@ -55,23 +41,10 @@
 
     <div class="tab-content" id="tab-content">
         <div class="tab-pane fade{if $product.description} show active{/if}" id="description" role="tabpanel">
-            {if !isset($description)}
-                {assign var='description' value=$product.description}   
-            {/if}
             {block name='product_description'}
-                <div class="product-description">{$description nofilter}</div>
+                <div class="product-description">{$product.description nofilter}</div>
             {/block}
         </div>
-
-        {if isset($otherDescriptions)}
-            {foreach from=$otherDescriptions item=description key=extraKey}
-                <div class="tab-pane fade" id="description{$extraKey}" role="tabpanel">
-                    {block name='product_description'}
-                        <div class="product-description">{$description[1] nofilter}</div>
-                    {/block}
-                </div>
-            {/foreach}
-        {/if}
 
         {block name='product_details'}
             {include file='catalog/_partials/product-details.tpl'}
