@@ -82,7 +82,7 @@ sup{
 
 }
 .btn-primary {
-    
+
     &.btn-inverted {
         color: $primary;
         border-color: $primary;
@@ -94,7 +94,7 @@ sup{
     }
 }
 .btn-secondary {
-    
+
     &.btn-inverted {
         color: $secondary;
         border-color: $secondary;
@@ -107,29 +107,29 @@ sup{
 }
 
 .btn-white {
-  background: $white;
+    background: $white;
 
-  &.btn-inverted {
-    color: $white;
-    border-color: $white;
+    &.btn-inverted {
+        color: $white;
+        border-color: $white;
 
-    &:hover {
-      color: $white
+        &:hover {
+            color: $white
+        }
     }
-  }
 }
 
 .btn-black {
-  background: $black;
+    background: $black;
 
-  &.btn-inverted {
-    color: $black;
-    border-color: $black;
+    &.btn-inverted {
+        color: $black;
+        border-color: $black;
 
-    &:hover {
-      color: $black
+        &:hover {
+            color: $black
+        }
     }
-  }
 }
 
 .btn-sm {
@@ -291,6 +291,14 @@ input[type="number"] {
 }
 
 /* CHECKOUT STEP */
+.address-header, .card-header, .page-header {
+    padding: 0.25rem 1.25rem;
+    h1 {
+        i {
+            font-size: 1.25rem;
+        }
+    }
+}
 .order-checkout .card-body{
     padding-bottom: 0;
 
@@ -310,6 +318,9 @@ input[type="number"] {
 }
 .-current .card-header{
     background-color: $primary;
+}
+.card-body {
+    padding: 2.25rem;
 }
 
 
