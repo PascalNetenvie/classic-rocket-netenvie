@@ -309,6 +309,11 @@ input[type="number"] {
 .step-title
 {
     margin-bottom: 0;
+    line-height: rem(26px);
+    i {
+        top:3px;
+    }
+        
 }
 .-complete.-reachable .step-title .done {
     display: inline-block;
