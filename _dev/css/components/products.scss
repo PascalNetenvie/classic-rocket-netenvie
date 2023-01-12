@@ -197,8 +197,12 @@
 }
 .label-zoom {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     text-align: center;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    font-size: 0.8rem;
 
     @include media-breakpoint-desktop {
         display: none;
