@@ -10,6 +10,9 @@
 //    color:$blockcart-inactive-color;
 //  }
 //}
+#checkout #wrapper, #cart #wrapper {
+    padding-top: $spacer;
+}
 .product-line-actions{
   display:flex;
   justify-content: space-between;
