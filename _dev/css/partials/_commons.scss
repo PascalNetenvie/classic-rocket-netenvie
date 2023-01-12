@@ -334,7 +334,10 @@ input[type="number"] {
     }
 }
 .card-body {
-    padding: 2.25rem;
+    padding: 1.25rem;
+    @include media-breakpoint-desktop {
+        padding: 2.25rem;
+    }
 }
 
 
@@ -355,10 +358,10 @@ input[type="number"] {
 //Personnal info
 .nav-tabs-info{
     font-size: $font-size-base*0.8;
-    padding: .5rem;
+    padding: .5rem .3rem;
     @include media-breakpoint-desktop {
-    font-size: $font-size-base*1.1;
-    padding: .5rem 1rem;
+        font-size: $font-size-base*1.1;
+        padding: .5rem 1rem;
     }
     .active{
         font-weight: bold;
