@@ -32,6 +32,9 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
+                {if isset($cover)}
+                     <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}">
+                {/if}
                 {foreach from=$product.images item=image}
                     <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
                 {/foreach}
