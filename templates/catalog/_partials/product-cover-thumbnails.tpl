@@ -105,7 +105,7 @@
             {block name='product_flags'}
                 {include file='catalog/_partials/product-flags.tpl'}
             {/block}
-            <span class="label-zoom">Appuyer et glisser pour zoom</span>
+            <span class="label-zoom">Zoom : appuyer et glisser</span>
             <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImagesCount}">
 
                 <div class="product-img thumbnail-container">
