@@ -203,6 +203,7 @@
     z-index: 1;
     left: 0;
     font-size: 0.8rem;
+    text-shadow: 0 0 3px rgba(255,255,255,0.95);
 
     @include media-breakpoint-desktop {
         display: none;
