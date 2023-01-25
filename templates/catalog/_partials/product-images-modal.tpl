@@ -34,16 +34,21 @@
             <div class="modal-body">
                 {if isset($cover)}
                      <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}">
-                {/if}
-                {foreach from=$product.images item=image}
-                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
-                {/foreach}
+					{foreach from=$product.images item=image}
+						{if $image.id_image != $cover.id_image}
+							<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+						{/if}
+					{/foreach}
+				{else}
+					{foreach from=$product.images item=image}
+						<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+					{/foreach}
+				{/if}
                 {if $allImagesCount > 0}
                     {foreach from=$allImages item=image}
-                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
-                {/foreach}
+						<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+					{/foreach}
                 {/if}
-
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
