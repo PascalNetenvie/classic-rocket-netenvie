@@ -167,6 +167,13 @@ sup{
         }
     }
 }
+.btn-xs,
+.btn-group-xs>.btn {
+    padding: 0.25rem 0.35rem;
+    font-size: 0.625rem;
+    line-height: 0.825rem;
+    height: auto;
+}
 
 s .btn-sm,
 .btn-group-sm>.btn {
