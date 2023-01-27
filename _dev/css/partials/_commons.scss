@@ -67,8 +67,10 @@ sup{
         ul {
             list-style: disc;
             padding-left: 25px;
+            ul {
+                list-style: cicle;
+            }
         }
-
     }
 }
 
