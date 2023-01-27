@@ -52,6 +52,22 @@ sup{
     margin-bottom: $spacer;
 }
 
+.bg-black {
+    background: $black;
+}
+
+/* CMS (NETENVIE) */
+
+#cms {
+    ul {
+        .page-content--cms {
+            list-style: disc;
+            padding-left: 25px;
+        }
+    }
+}
+/* FIN CMS (NETENVIE) */
+
 /* BOUTONS (NETENVIE) */
 
 .btn:not(:disabled):not(.disabled):active:focus,
@@ -122,15 +138,14 @@ sup{
     background: $black;
     color: $white;
 
+    &:hover {
+        color: $white;
+    }
     &.btn-inverted {
         &:not(:hover) {
             color: $black;
             border-color: $black;
             background: transparent;
-        }
-
-        &:hover {
-            color: $black;
         }
     }
 }
