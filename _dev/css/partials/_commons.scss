@@ -64,11 +64,28 @@ sup{
 
 #cms {
     .page-content--cms {
+        h2 {
+            margin-top: 40px;
+        }
+        h3 {
+            margin-top: 25px;
+        }
+        h4 {
+            margin-top: 15px;
+        }
+        h5 {
+            margin-top: 10px;
+        }
+        h6 {
+            margin-top: 10px;
+        }
         ul {
             list-style: disc;
             padding-left: 25px;
-            ul {
-                list-style: cicle;
+            li {
+                ul {
+                    list-style: circle;
+                }
             }
         }
     }
