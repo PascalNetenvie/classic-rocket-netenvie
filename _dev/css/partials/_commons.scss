@@ -58,110 +58,112 @@ sup{
 .btn:not(:disabled):not(.disabled).active:focus,
 .btn:focus,
 .btn.focus {
-  box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
 }
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  box-shadow: 0 0 0;
-  font-size: rem(14px);
-  line-height: rem(15px);
-  text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    box-shadow: 0 0 0;
+    font-size: rem(14px);
+    line-height: rem(15px);
+    text-transform: uppercase;
 
-  @include media-breakpoint-desktop {
-    height: 38px;
-  }
+    @include media-breakpoint-desktop {
+        height: 38px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn {
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
+    .btn {
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
 }
 
 .btn-primary {
-  &.btn-inverted {
-    &:not(:hover) {
-      color: $primary;
-      border-color: $primary;
-      background: transparent;
+    &.btn-inverted {
+        &:not(:hover) {
+            color: $primary;
+            border-color: $primary;
+            background: transparent;
+        }
     }
-  }
 }
 
 .btn-secondary {
-  &.btn-inverted {
-    &:not(:hover) {
-      color: $secondary;
-      border-color: $secondary;
-      background: transparent;
+    &.btn-inverted {
+        &:not(:hover) {
+            color: $secondary;
+            border-color: $secondary;
+            background: transparent;
+        }
     }
-  }
 }
 
 .btn-white {
-  background: $white;
+    background: $white;
+    color: $black;
 
-  &.btn-inverted {
-    &:not(:hover) {
-      color: $white;
-      border-color: $white;
-      background: transparent;
-    }
+    &.btn-inverted {
+        &:not(:hover) {
+            color: $white;
+            border-color: $white;
+            background: transparent;
+        }
 
-    &:hover {
-      background: $white;
+        &:hover {
+            background: $white;
+        }
     }
-  }
 }
 
 .btn-black {
-  background: $black;
+    background: $black;
+    color: $white;
 
-  &.btn-inverted {
-    &:not(:hover) {
-      color: $black;
-      border-color: $black;
-      background: transparent;
-    }
+    &.btn-inverted {
+        &:not(:hover) {
+            color: $black;
+            border-color: $black;
+            background: transparent;
+        }
 
-    &:hover {
-      color: $black;
+        &:hover {
+            color: $black;
+        }
     }
-  }
 }
 
 s .btn-sm,
 .btn-group-sm>.btn {
-  padding: 0.25rem 0.5rem;
-  line-height: 1.6;
-  border-radius: 0;
-  font-size: 0.785rem;
-  height: 26px;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.6;
+    border-radius: 0;
+    font-size: 0.785rem;
+    height: 26px;
 }
 
 
 .btn-lg,
 .btn-group-lg>.btn {
-  height: 50px;
-  padding: 5px 23px;
+    height: 50px;
+    padding: 5px 23px;
 
-  @include media-breakpoint-desktop {
-    height: 60px;
-  }
+    @include media-breakpoint-desktop {
+        height: 60px;
+    }
 }
 
 .btn-xl,
 .btn-group-xl>.btn {
-  line-height: 18px;
-  height: 60px;
-  padding: 5px 28px;
+    line-height: 18px;
+    height: 60px;
+    padding: 5px 28px;
 
-  @include media-breakpoint-desktop {
-    height: 80px;
-  }
+    @include media-breakpoint-desktop {
+        height: 80px;
+    }
 }
 
 /* FIN BOUTONS (NETENVIE) */
