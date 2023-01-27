@@ -110,6 +110,7 @@ sup{
     font-size: rem(14px);
     line-height: rem(15px);
     text-transform: uppercase;
+    border-radius: 0;
 
     @include media-breakpoint-desktop {
         height: 38px;
@@ -196,11 +197,10 @@ sup{
 
 s .btn-sm,
 .btn-group-sm>.btn {
-    padding: 0.25rem 0.5rem;
-    line-height: 1.6;
-    border-radius: 0;
-    font-size: 0.785rem;
-    height: 26px;
+    padding: .5rem .6rem;
+    font-size: .825rem;
+    line-height: 1.35;
+    height: auto;
 }
 
 
