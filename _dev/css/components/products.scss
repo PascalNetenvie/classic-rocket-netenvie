@@ -283,6 +283,12 @@
     //@extend .card-block
     //box-shadow:$card-box-shadow;;
 }
+.product-description {
+	ul {
+		list-style: initial;
+		padding-left: 25px;
+	}
+}
 .card--reassurance{
     box-shadow:$card-box-shadow;
     ;

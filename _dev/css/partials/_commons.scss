@@ -378,6 +378,12 @@ input[type="number"] {
 .step-edit[aria-expanded="true"]{
     display: none;
 }
+.contact-rich {
+  @include media-breakpoint-mobile {
+    text-align: center;
+  }
+}
+
 .step-title {
   margin-bottom: 0;
   line-height: rem(26px);
