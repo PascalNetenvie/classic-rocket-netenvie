@@ -484,6 +484,9 @@ input[type="number"] {
     padding: $spacer;
     border: 3px solid $card-border-color;
 }
+.addresshead {
+  margin-bottom: 0;
+}
 #content-checkout-payment-step .alert-info {
   padding: 3px 10px;
 }
