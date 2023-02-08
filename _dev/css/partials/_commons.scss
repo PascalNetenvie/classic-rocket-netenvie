@@ -115,6 +115,9 @@ sup{
     @include media-breakpoint-desktop {
         height: 38px;
     }
+  &.step-edit {
+    height: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
