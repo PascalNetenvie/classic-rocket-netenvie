@@ -49,7 +49,7 @@
                        </div>
                      </div>
                      {if $carrier.logo}
-                       <div class="col-11 col-sm-1">
+                       <div class="col-10 col-sm-1">
                          <img src="{$carrier.logo}" alt="{$carrier.name}" />
                        </div>
                      {/if}
