@@ -375,18 +375,21 @@ input[type="number"] {
 .step-edit[aria-expanded="true"]{
     display: none;
 }
-.step-title
-{
-    margin-bottom: 0;
-    line-height: rem(26px);
-    i {
-        top: 4px;
-        position: relative;
-    }
+.step-title {
+  margin-bottom: 0;
+  line-height: rem(26px);
 
-    @include media-breakpoint-mobile{
-        font-size: 0.9rem;
-    }
+  i {
+    top: 4px;
+    position: relative;
+  }
+
+  @include media-breakpoint-mobile {
+    font-size: 0.9rem;
+  }
+  &.not-allowed {
+    margin-left: 20px;;
+  }
 }
 .-complete.-reachable .step-title .done {
     display: inline-block;
