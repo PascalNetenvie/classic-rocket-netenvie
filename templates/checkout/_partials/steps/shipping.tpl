@@ -53,13 +53,13 @@
                         <img src="{$carrier.logo}" alt="{$carrier.name}" />
                       </div>
                     {/if}
-                    <div class="col-12 {if $carrier.logo}col-sm-3{else}col-sm-2{/if}">
+                    <div class="col-12 {if $carrier.logo}col-sm-4{else}col-sm-5{/if}">
                       <span class="h6 carrier-name">{$carrier.name}</span>
                     </div>
                     <div class="col-12 col-sm-4">
                       <span class="carrier-delay">{$carrier.delay}</span>
                     </div>
-                    <div class="col-12 col-sm-3 text--right">
+                    <div class="col-12 col-sm-2 text--right">
                       <span class="carrier-price">{$carrier.price}</span>
                     </div>
                   </label>
