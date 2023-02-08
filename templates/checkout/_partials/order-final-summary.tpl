@@ -70,7 +70,7 @@
   <table class="table table-bordered">
     <tr>
         {if $selected_delivery_option.logo}
-          <td class="logo-container">
+          <td class="logo-container d-none d-sm-block">
             <img src="{$selected_delivery_option.logo}" alt="{$selected_delivery_option.name}">
           </td>
         {/if}
