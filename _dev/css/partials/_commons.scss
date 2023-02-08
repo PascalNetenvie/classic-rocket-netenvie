@@ -479,13 +479,23 @@ input[type="number"] {
     }
 }
 // Shipping
+
+.delivery-option
 .delivery-option {
   padding: $spacer;
   margin-bottom: $spacer;
   background-color: $gray-200;
 
-  img {
-    max-width: 100% !important;
+  >.row {
+    align-items: center;
+  }
+}
+
+#js-delivery {
+  .delivery-option {
+    img {
+      max-width: 100% !important;
+    }
   }
 }
 .carrier-extra-content:not(:empty){
