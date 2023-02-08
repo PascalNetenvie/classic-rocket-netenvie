@@ -476,6 +476,7 @@ input[type="number"] {
     font-size: $font-size-lg;
     color: $primary;
 }
+
 //order list final recap
 .order-line:not(:last-child){
     margin-bottom: $spacer/2;
@@ -485,7 +486,8 @@ input[type="number"] {
     border: 3px solid $card-border-color;
 }
 .payment-option {
-  mar
+  margin-bottom: 10px;
+}
 .addresshead {
   margin-bottom: 0;
 }
