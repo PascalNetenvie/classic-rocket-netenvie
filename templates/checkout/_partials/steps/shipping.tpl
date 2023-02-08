@@ -49,11 +49,11 @@
                       </div>
                     </div>
                     {if $carrier.logo}
-                      <div class="col-11 col-sm-3">
+                      <div class="col-11 col-sm-1">
                         <img src="{$carrier.logo}" alt="{$carrier.name}" />
                       </div>
                     {/if}
-                    <div class="col-12 {if $carrier.logo}col-sm-5{else}col-sm-2{/if}">
+                    <div class="col-12 {if $carrier.logo}col-sm-3{else}col-sm-2{/if}">
                       <span class="h6 carrier-name">{$carrier.name}</span>
                     </div>
                     <div class="col-12 col-sm-4">
