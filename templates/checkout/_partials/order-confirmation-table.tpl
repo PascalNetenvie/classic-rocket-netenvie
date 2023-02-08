@@ -27,8 +27,8 @@
       {block name='order_items_table_head'}
         <h3 class="table__title-head col-md-6 col-12">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
         <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
-        <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
-        <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-2 text-md-center _desktop-title d-none d-sm-block">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-2 text-md-center _desktop-title d-none d-sm-block">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
       {/block}
   </div>
 
