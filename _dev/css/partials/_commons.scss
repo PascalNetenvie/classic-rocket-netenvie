@@ -477,13 +477,28 @@ input[type="number"] {
         display: none;
     }
 }
-.carrier-name{
-    font-weight: $font-weight-bold;
+
+.carrier-name {
+  font-weight: $font-weight-bold;
+  @include media-breakpoint-mobile {
+    font-size: 0.85rem ;
+    line-height: 1.25;
+  }
 }
-.carrier-price{
-    font-weight: bold;
-    font-size: $font-size-lg;
-    color: $primary;
+
+.carrier-delay {
+  @include media-breakpoint-mobile {
+    font-size: 0.85rem ;
+    line-height: 1.25;
+  }
+}
+.carrier-price {
+  font-weight: bold;
+  font-size: $font-size-lg;
+  color: $primary;
+  @include media-breakpoint-mobile {
+    font-size:  1.05rem;
+  }
 }
 
 //order list final recap
