@@ -23,13 +23,13 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <div id="order-items" class="">
-  <div class="row">
+  <h4 class="h4 mt-3 d-block d-sm-none">{l s='Order items' d='Shop.Theme.Checkout'}</h4>
+  <div class="row d-none d-sm-row">
       {block name='order_items_table_head'}
-        <h4 class="h4 mt-3 d-block d-sm-none">{l s='Order items' d='Shop.Theme.Checkout'}</h4>
-        <h3 class="table__title-head col-md-6 col-12 d-none d-sm-block">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
-        <h3 class="table__title-head col-md-2 text-md-center _desktop-title d-none d-sm-block">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
-        <h3 class="table__title-head col-md-2 text-md-center _desktop-title d-none d-sm-block">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
-        <h3 class="table__title-head col-md-2 text-md-center _desktop-title d-none d-sm-block">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-6 col-12">{l s='Order items' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Unit price' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Quantity' d='Shop.Theme.Checkout'}</h3>
+        <h3 class="table__title-head col-md-2 text-md-center _desktop-title">{l s='Total products' d='Shop.Theme.Checkout'}</h3>
       {/block}
   </div>
 
