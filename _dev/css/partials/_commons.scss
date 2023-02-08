@@ -119,11 +119,13 @@ sup{
     height: auto;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
     .btn {
         transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
+}
+.btn.disabled, .btn:disabled {
+  opacity: 0.45;
 }
 
 .btn-primary {
