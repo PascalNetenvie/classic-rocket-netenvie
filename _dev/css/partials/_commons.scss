@@ -430,16 +430,14 @@ input[type="number"] {
     }
 }
 //Personnal info
-.nav-tabs-info{
-    font-size: $font-size-base*0.8;
-    padding: .5rem .3rem;
-    @include media-breakpoint-desktop {
-        font-size: $font-size-base*1.1;
-        padding: .5rem 1rem;
-    }
-    .active{
-        font-weight: bold;
-    }
+.nav-tabs-info {
+
+  @include media-breakpoint-mobile() {
+    font-size: 0.85rem;
+  }
+  .active {
+    font-weight: bold;
+  }
 }
 
 #order-summary-content {
