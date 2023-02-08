@@ -478,11 +478,15 @@ input[type="number"] {
         opacity: .8;
     }
 }
-// SHipping
-.delivery-option{
-    padding: $spacer;
-    margin-bottom: $spacer;
-    background-color: $gray-200;
+// Shipping
+.delivery-option {
+  padding: $spacer;
+  margin-bottom: $spacer;
+  background-color: $gray-200;
+
+  img {
+    max-width: 100% !important;
+  }
 }
 .carrier-extra-content:not(:empty){
     margin-bottom: $spacer*2;
