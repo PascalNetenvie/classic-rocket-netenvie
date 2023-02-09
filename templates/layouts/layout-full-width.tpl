@@ -36,8 +36,3 @@
     {hook h="displayContentWrapperBottom"}
   </div>
 {/block}
-
-
-    {block name='head_font'}
-      {include file="_partials/font-load.tpl"}
-    {/block}
