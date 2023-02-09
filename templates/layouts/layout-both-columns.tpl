@@ -147,7 +147,7 @@
 
 
         {block name='javascript_bottom'}
-        {include file="_partials/font-load.tpl"}
+        {include file="_partials/font-load.tpl"}aa
             {include file="_partials/javascript.tpl" javascript=$javascript.bottom}
         {/block}
 
