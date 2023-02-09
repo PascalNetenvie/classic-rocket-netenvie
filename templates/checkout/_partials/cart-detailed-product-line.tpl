@@ -25,10 +25,7 @@
 <div class="product-line-grid row no-gutters">
     <div class="col-12 col-lg-7">
         <div class="media">
-
-            {$product.id_product_attribute}    
             {assign var='productimg' value=Image::getImages($language.id, $product.id, $product.id_product_attribute)}  
-              
             {if isset($productimg[0])}
                 <img
                     src = "{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'cart_default')}" alt="{$product.name|escape:'quotes'}"
