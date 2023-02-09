@@ -145,9 +145,9 @@
             {* end offcanvas menu *}
         {/block}
 
-        {include file="_partials/font-load.tpl"}
 
         {block name='javascript_bottom'}
+        {include file="_partials/font-load.tpl"}
             {include file="_partials/javascript.tpl" javascript=$javascript.bottom}
         {/block}
 
