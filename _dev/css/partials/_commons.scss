@@ -480,8 +480,8 @@ input[type="number"] {
 }
 // Shipping
 
-.delivery-option
 .delivery-option {
+  cursor: pointer;
   padding: $spacer;
   margin-bottom: $spacer;
   background-color: $gray-200;
