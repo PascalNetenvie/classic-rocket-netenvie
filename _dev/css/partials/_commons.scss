@@ -485,6 +485,7 @@ input[type="number"] {
   padding: $spacer;
   margin-bottom: $spacer;
   background-color: $gray-200;
+  display: block;
 
   >.row {
     align-items: center;
