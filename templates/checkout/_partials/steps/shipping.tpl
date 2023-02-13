@@ -37,8 +37,8 @@
            {block name='delivery_options'}
              <div class="delivery-options">
                {foreach from=$delivery_options item=carrier key=carrier_id}
-                 <div class="delivery-option">
-                   <label for="delivery_option_{$carrier.id}" class="row delivery-option-2">
+                 <label for="delivery_option_{$carrier.id}" class="delivery-option">
+                   <div class="row delivery-option-2">
                      <div class="col-1">
                        <div class="custom-control custom-radio">
                          <input class="custom-control-input" type="radio" name="delivery_option[{$id_address}]"
@@ -62,8 +62,8 @@
                      <div class="col-12 col-sm-2 text--right">
                        <span class="carrier-price">{$carrier.price}</span>
                      </div>
-                   </label>
-                 </div>
+                   </div>
+                 </label>
                  <div class="carrier-extra-content" {if $delivery_option != $carrier_id} style="display:none;" {/if}>
                    {$carrier.extraContent nofilter}</div>
                  <div class="clearfix"></div>
