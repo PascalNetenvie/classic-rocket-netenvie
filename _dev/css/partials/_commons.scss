@@ -2,6 +2,12 @@ body{
     background-color: $wrapper-bg;
     padding-top: $header-height;
 }
+input, button, select, optgroup, textarea {
+  //font-family: $opensans-font;
+}
+h2, .h2 {
+  text-transform: none;
+}
 a{
     text-decoration: none;
 }
@@ -452,9 +458,24 @@ input[type="number"] {
   }
 }
 
+//Résumé commande
+
 #order-summary-content {
-  h4 {
+  .h4 {
     margin: 1.5rem 0 10px;
+  }
+
+  .logo-container {
+    img {
+      max-height: 48px !important;
+      width: auto!important;
+    }
+  }
+
+  table {
+    td {
+      vertical-align: middle;
+    }
   }
 }
 
