@@ -53,7 +53,7 @@
                          <img src="{$carrier.logo}" alt="{$carrier.name}" />
                        </div>
                      {/if}
-                     <div class="col-12 {if $carrier.logo}col-sm-7{else}col-sm-5{/if}">
+                     <div class="col-12 {if $carrier.logo}col-sm-5{else}col-sm-7{/if}">
                        <span class="h6 carrier-name">{$carrier.name}</span>
                      </div>
                      <div class="col-12 col-sm-2">
