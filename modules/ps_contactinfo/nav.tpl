@@ -42,7 +42,7 @@
 </div>
     {if $contact_infos.phone}
       {l
-        s='<a id="link-mobile" href="tel:%phone%">%phone%</a>'
+        s='<a id="link-mobile" href="tel:%phone%"><img src="/themes/classic-rocket-netenvie/assets/img/telephone.svg" alt=""></a>'
         sprintf=[
           '%phone%' => $contact_infos.phone
         ]
