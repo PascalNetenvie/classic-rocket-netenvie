@@ -3,6 +3,12 @@
 }
 #product-modal {
     text-align: center;
+
+    .modal-header {
+        border-bottom: 0;
+        background-color: #000;
+    }
+
     .modal-body {
         text-align: center;
     }

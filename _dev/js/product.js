@@ -35,9 +35,10 @@ $(document).ready(function () {
 
 
     if (prestashop.responsive.mobile) {
-        $(".btn-zoom").hide();
+        //$(".btn-zoom").hide();
         console.log('zoom');
-        $(".product-img img").parent().zoom();
+        //$(".product-img img").parent().zoom();
+        $("#product-modal img").parent().zoom();
     }
 
     prestashop.on('updatedProduct', function (event) {

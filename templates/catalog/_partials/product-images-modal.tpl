@@ -30,25 +30,31 @@
 {/if}
 <div class="modal fade js-product-images-modal" id="product-modal">
     <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-header d-block d-md-none">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <div class="modal-content">
             <div class="modal-body">
                 {if isset($cover)}
-                     <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}">
-					{foreach from=$product.images item=image}
-						{if $image.id_image != $cover.id_image}
-							<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
-						{/if}
-					{/foreach}
-				{else}
-					{foreach from=$product.images item=image}
-						<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
-					{/foreach}
-				{/if}
+                    <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}">
+                    {foreach from=$product.images item=image}
+                        {if $image.id_image != $cover.id_image}
+                            <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+                        {/if}
+                    {/foreach}
+                {else}
+                    {foreach from=$product.images item=image}
+                        <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+                    {/foreach}
+                {/if}
                 {if $allImagesCount > 0}
                     {foreach from=$allImages item=image}
-						<img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
-					{/foreach}
+                        <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
+                    {/foreach}
                 {/if}
+                <span class="label-zoom">Zoom : appuyer et glisser</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

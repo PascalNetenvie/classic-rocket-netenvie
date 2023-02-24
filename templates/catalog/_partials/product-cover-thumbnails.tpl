@@ -105,7 +105,6 @@
             {block name='product_flags'}
                 {include file='catalog/_partials/product-flags.tpl'}
             {/block}
-            <span class="label-zoom">Zoom : appuyer et glisser</span>
             <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImagesCount}">
 
                 <div class="product-img thumbnail-container">
@@ -128,7 +127,7 @@
                         <img class="img-fluid" src="{$defaultIimage.bySize.medium_default.url}" alt="{$defaultIimage.legend}">
                         </noscript>
                     </div>
-                    <button data-id-image="{$defaultIimage.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                    <button data-id-image="{$defaultIimage.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                         <i class="material-icons zoom-in">&#xE8FF;</i>
                     </button>
                 </div>
@@ -153,7 +152,7 @@
                                 <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                 </noscript>
                             </div>
-                            <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                            <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                                 <i class="material-icons zoom-in">&#xE8FF;</i>
                             </button>
                         </div>
@@ -181,7 +180,7 @@
                                     <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                     </noscript>
                                 </div>
-                                <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom visible-desktop product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                                <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                                     <i class="material-icons zoom-in">&#xE8FF;</i>
                                 </button>
                             </div>
