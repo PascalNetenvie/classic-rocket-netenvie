@@ -9,6 +9,21 @@
   z-index: 999;
   width: 100%;
   top: 0;
+  #link-mobile {
+    display: none;
+  }
+}
+
+#checkout {
+  #header {
+    #link-mobile {
+      display: block;
+
+      @include media-breakpoint-desktop {
+        display: none;
+      }
+    }
+  }
 }
 
 .header__up{

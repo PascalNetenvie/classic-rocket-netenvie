@@ -54,8 +54,11 @@
                         <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}">
                     {/foreach}
                 {/if}
-                <span class="label-zoom">Zoom : appuyer et glisser</span>
             </div>
+        <div class="d-block d-md-none">
+            
+                <p class="label-zoom">Zoom : appuyer et glisser</p>
+        </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
