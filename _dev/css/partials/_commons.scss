@@ -10,7 +10,7 @@ body{
   scroll-margin-top: $header-height-mobile;
 
   @include media-breakpoint-desktop {
-    scroll-margin-top $header-height;
+    scroll-margin-top: $header-height;
   }
 }
 input, button, select, optgroup, textarea {
