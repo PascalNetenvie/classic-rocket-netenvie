@@ -38,7 +38,7 @@ $(document).ready(function () {
         //$(".btn-zoom").hide();
         console.log('zoom');
         //$(".product-img img").parent().zoom();
-        $("#product-modal img").parent().zoom(magnify : 0.8);
+        $("#product-modal img").parent().zoom({magnify: 0.8});
     }
 
     prestashop.on('updatedProduct', function (event) {
