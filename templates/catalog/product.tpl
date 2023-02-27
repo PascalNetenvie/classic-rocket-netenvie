@@ -29,6 +29,9 @@
     <section id="main">
         <div class="row">
             <div class="col-lg-6">
+				<p class="d-block d-md-none text-center backtocat">
+					<span onclick="document.location=document.referrer ? document.referrer+'#{$product->link_rewrite}' : '{$link->getCategoryLink({$product->id_category_default})}#{$product->link_rewrite}';">Retour à la liste</a>
+				</p>
                 {block name='page_content_container'}
                     <section class="page-content--product" id="content">
                         {block name='page_content'}
