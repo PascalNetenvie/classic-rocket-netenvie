@@ -30,14 +30,20 @@
 {/if}
 <div class="modal fade js-product-images-modal" id="product-modal">
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-header d-block d-md-none">
+        <div class="modal-header d-flex d-md-none">
+            <button type="button" class="prev-image-modal" data-dismiss="modal" aria-label="Close">
+                <i class="material-icons">chevron_leftt</i>
+            </button>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <i class="material-icons">close</i>
+            </button>
+            <button type="button" class="next-image-modal" data-dismiss="modal" aria-label="Close">
+                <i class="material-icons">chevron_right</i>
             </button>
         </div>
         <div class="modal-content">
             <button type="button" class="close d-none d-md-block" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+                <i class="material-icons">close</i>
             </button>
             <div class="modal-body">
                 {if isset($cover)}
