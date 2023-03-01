@@ -157,10 +157,61 @@ $(document).ready(function () {
 
 $(document).on('click', '.btn-zoom', function () {
     var idImage = $(this).data('id-image');
-    $("#product-modal img").hide();
-    $("#product-modal img#image-" + idImage).show();
+    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+    $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');
 });
 
+$(document).on('click', '.next-image-modal', function (e) {
+    console.log('next-image-modal click');
+    var current = false;
+    var find = false;
+    var next = false;
+    var el = false;
+    $("#product-modal img.img-fluid").each(function (i) {
+        el = $(this);
+        if (current && !find) {
+            find = true;
+            next = el;
+        }
+        if ($(this).hasClass('current')) {
+            //console.log('find');
+            current = true;
+        }
+    });
+    /*
+     console.log('find :' + find);
+     console.log('current :' + current);
+     console.log('next');
+     console.log(next);
+     */
+    if (!next) {
+        next = $("#product-modal img.img-fluid").first();
+    }
+    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+    next.removeClass('d-none').addClass('current');
+});
+$(document).on('click', '.prev-image-modal', function (e) {
+
+    console.log('next-image-modal click');
+    var current = false;
+    var find = false;
+    var prev = false;
+    var el = $("#product-modal img.img-fluid").last();
+    $("#product-modal img.img-fluid").each(function (i) {
+        if ($(this).hasClass('current')) {
+            prev = el;
+        }
+        el = $(this);
+    });
+    /*
+     console.log('find :' + find);
+     console.log('current :' + current);
+     console.log('next');
+     console.log(next);
+     */
+    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+    prev.removeClass('d-none').addClass('current');
+});
 /*
  $(document).on('shown.bs.modal', '#product-modal', function (e) {
  $('#js-slick-product').resize();
