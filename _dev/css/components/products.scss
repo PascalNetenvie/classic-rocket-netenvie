@@ -234,6 +234,7 @@
 
 }
 
+
 #product-modal {
     .modal-dialog {
         margin: 0.25rem auto;
@@ -261,24 +262,34 @@
         i {
             font-size: 3.5rem;
         }
+
+        width: calc(33.33%);
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
     }
 
     .close {
-        font-size: 3.5rem;
         opacity: 1;
         padding: 0;
-        margin: 0 auto;
         float: none;
         cursor: pointer;
 
+        i {
+            font-size: 2.9rem;
+        }
+        span {
+            margin-top: -5px;
+        }
+
         @include media-breakpoint-desktop {
-            font-size: 3rem;
-            height: 3rem;
+            width: auto;
+            font-size: 2rem;
             position: absolute;
-            right: -3px;
-            top: -15px;
+            right: 0;
+            top: 0;
             z-index: 9;
-            margin: 0 -32px 0 0;
+            margin: -6px -45px 0 0;
             text-shadow: 0 0 5px #000;
         }
     }
