@@ -36,6 +36,9 @@
             </button>
         </div>
         <div class="modal-content">
+            <button type="button" class="close d-none d-md-block" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="modal-body">
                 {if isset($cover)}
                     <div><img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}"></div>
