@@ -234,7 +234,6 @@
 
 }
 
-
 #product-modal {
     .modal-dialog {
         margin: 0.25rem auto;
@@ -245,17 +244,31 @@
         padding: 0;
         background-color: $primary;
         margin: 0 1px;
+        align-items: center;
+
+        .prev-image-modal {}
+
+        .next-image-modal {}
+    }
+
+    button {
+        display: block;
+        text-shadow: 0 0 0;
+        border: 0;
+        background: transparent;
+        color: #fff;
+
+        i {
+            font-size: 3.5rem;
+        }
     }
 
     .close {
         font-size: 3.5rem;
-        text-shadow: 0 0 0;
         opacity: 1;
         padding: 0;
         margin: 0 auto;
-        color: #fff;
         float: none;
-        display: block;
         cursor: pointer;
 
         @include media-breakpoint-desktop {
@@ -272,7 +285,7 @@
 
     .modal-content {
         @include media-breakpoint-desktop {
-           // margin-top: 1.5rem;
+            // margin-top: 1.5rem;
         }
 
         .modal-body {
@@ -282,7 +295,6 @@
     }
 
 }
-
 
 .label-color{
     line-height: 1;
