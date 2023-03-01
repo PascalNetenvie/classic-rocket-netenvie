@@ -256,6 +256,7 @@
         color: #fff;
         float: none;
         display: block;
+        cursor: pointer;
 
         @include media-breakpoint-desktop {
             font-size: 3rem;
