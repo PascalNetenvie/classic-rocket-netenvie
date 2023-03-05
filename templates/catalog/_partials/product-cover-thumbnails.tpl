@@ -23,6 +23,7 @@
 * International Registered Trademark & Property of PrestaShop SA
 *}
 
+{assign var='numImage' value=0}
 {if isset($cover)}
     {assign var='defaultIimage' value=$cover}   
 {else} 
@@ -127,14 +128,14 @@
                         <img class="img-fluid" src="{$defaultIimage.bySize.medium_default.url}" alt="{$defaultIimage.legend}">
                         </noscript>
                     </div>
-                    <button data-id-image="{$defaultIimage.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                    <button data-id-image="{$defaultIimage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                         <i class="material-icons zoom-in">&#xE8FF;</i>
                     </button>
                 </div>
 
                 {foreach from=$product.images item=image   name="images"}
                     {if $image.id_image != $defaultIimage.id_image}
-
+                        {$numImage = $numImage +1}
                         <div class="product-img" id-image="{$image.id_image}">
                             <div class="rc">
                                 <img
@@ -152,7 +153,7 @@
                                 <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                 </noscript>
                             </div>
-                            <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                            <button data-id-image="{$image.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                                 <i class="material-icons zoom-in">&#xE8FF;</i>
                             </button>
                         </div>
@@ -162,6 +163,7 @@
                 {if $allImagesCount > 0}
                     {foreach from=$allImages item=image   name="images"}
                         {if $image.id_image != $defaultIimage.id_image}
+                            {$numImage = $numImage +1}
 
                             <div class="product-img all" id-image="{$image.id_image}">
                                 <div class="rc">
@@ -180,7 +182,7 @@
                                     <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
                                     </noscript>
                                 </div>
-                                <button data-id-image="{$image.id_image}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                                <button data-id-image="{$image.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                                     <i class="material-icons zoom-in">&#xE8FF;</i>
                                 </button>
                             </div>

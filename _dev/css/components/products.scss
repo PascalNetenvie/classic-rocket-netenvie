@@ -219,7 +219,7 @@
     /*
     position: absolute;
     bottom: 10px;
-*/
+    */
     margin: 1rem;
     text-align: center;
     width: 100%;
@@ -247,12 +247,16 @@
         margin: 0 1px;
         align-items: center;
 
-        .prev-image-modal {}
+        .prev-image-modal {
+        }
 
-        .next-image-modal {}
+        .next-image-modal {
+        }
     }
 
-    button {
+
+
+    .modal-header button, .close {
         display: block;
         text-shadow: 0 0 0;
         border: 0;
@@ -268,6 +272,7 @@
         padding: 0;
         margin: 0;
     }
+
 
     .close {
         opacity: 1;
@@ -376,10 +381,10 @@
     //box-shadow:$card-box-shadow;;
 }
 .product-description {
-	ul {
-		list-style: initial;
-		padding-left: 25px;
-	}
+    ul {
+        list-style: initial;
+        padding-left: 25px;
+    }
 }
 .card--reassurance{
     box-shadow:$card-box-shadow;
@@ -459,12 +464,12 @@
             background: #fff;
             justify-content: center;
             width: 100%;
-			/*
-            left: 0;
-            position: fixed;
-            bottom: 0;
-            box-shadow: 0px -0.25rem 0.5rem rgba($black, .15);
-			*/
+            /*
+left: 0;
+position: fixed;
+bottom: 0;
+box-shadow: 0px -0.25rem 0.5rem rgba($black, .15);
+            */
         }
         .modal-body{
             //margin-bottom: ($btn-padding-y * 2) + ($btn-font-size*$btn-line-height) + $modal-inner-padding * 2;

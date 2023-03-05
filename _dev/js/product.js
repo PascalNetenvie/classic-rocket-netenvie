@@ -117,7 +117,29 @@ $(document).ready(function () {
             verticalSwiping: false,
         });
 
+        $('#js-slick-product').slick({
+            asNavFor: '.product-thumbs, .products-imagescover',
+            prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow d-none d-md-block"><i class="material-icons">chevron_left</i></button>',
+            nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow d-none d-md-block"><i class="material-icons">chevron_right</i></button>',
+            dots: false,
+            infinite: true,
+            speed: 300,
+            rows: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            vertical: false,
+            verticalSwiping: false,
+            swipe: false,
+        });
 
+        // On before slide change
+        /*
+        $('#js-slick-product').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            console.log(nextSlide);
+            //$('.products-imagescover').slick('slickGoTo', nextSlide);
+            //$('.product-thumbs').slick('slickGoTo', nextSlide);
+
+        });*/
 
     }
 
@@ -155,14 +177,32 @@ $(document).ready(function () {
 
 });
 
+var idImage = 0;
+var numImage = 0;
+
+
+
+$(document).on('shown.bs.modal', '#product-modal', function (e) {
+    console.log('shown #product-modal');
+    console.log('numImage : ' + numImage);
+    $('#js-slick-product').resize();
+});
+
 $(document).on('click', '.btn-zoom', function () {
-    var idImage = $(this).data('id-image');
-    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-    $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');
+    console.log('btn-zoom click');
+    idImage = $(this).data('id-image');
+    numImage = $(this).data('num-image');
+    $('#js-slick-product').slick('slickGoTo', numImage);
+    console.log('numImage : ' + numImage);
+    /*  $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+     $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');*/
 });
 
 $(document).on('click', '.next-image-modal', function (e) {
     console.log('next-image-modal click');
+    $('#js-slick-product').slick('slickNext');
+    
+    /*
     var current = false;
     var find = false;
     var next = false;
@@ -178,21 +218,17 @@ $(document).on('click', '.next-image-modal', function (e) {
             current = true;
         }
     });
-    /*
-     console.log('find :' + find);
-     console.log('current :' + current);
-     console.log('next');
-     console.log(next);
-     */
     if (!next) {
         next = $("#product-modal img.img-fluid").first();
     }
     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
     next.removeClass('d-none').addClass('current');
+    */
 });
 $(document).on('click', '.prev-image-modal', function (e) {
-
-    console.log('next-image-modal click');
+    console.log('prev-image-modal click');
+    $('#js-slick-product').slick('slickPrev');
+/*
     var current = false;
     var find = false;
     var prev = false;
@@ -203,14 +239,9 @@ $(document).on('click', '.prev-image-modal', function (e) {
         }
         el = $(this);
     });
-    /*
-     console.log('find :' + find);
-     console.log('current :' + current);
-     console.log('next');
-     console.log(next);
-     */
     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
     prev.removeClass('d-none').addClass('current');
+    */
 });
 /*
  $(document).on('shown.bs.modal', '#product-modal', function (e) {

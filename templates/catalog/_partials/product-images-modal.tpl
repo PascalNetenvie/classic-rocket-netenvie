@@ -46,31 +46,33 @@
                 <i class="material-icons">close</i>
             </button>
             <div class="modal-body">
-                {if isset($cover)}
-                    <div>
-                        <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}" />
-                    </div>
-                    {foreach from=$product.images item=image}
-                        {if $image.id_image != $cover.id_image}
+                <div id="js-slick-product">
+                    {if isset($cover)}
+                        <div>
+                            <img id="image-{$cover.id_image}" data-src="{$cover.large.url}" class="img-fluid lazyload" width="{$cover.large.width}" alt="{$cover.legend}" title="{$cover.legend}" />
+                        </div>
+                        {foreach from=$product.images item=image}
+                            {if $image.id_image != $cover.id_image}
+                                <div>
+                                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
+                                </div>
+                            {/if}
+                        {/foreach}
+                    {else}
+                        {foreach from=$product.images item=image}
                             <div>
                                 <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
                             </div>
-                        {/if}
-                    {/foreach}
-                {else}
-                    {foreach from=$product.images item=image}
-                        <div>
-                            <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
-                        </div>
-                    {/foreach}
-                {/if}
-                {if $allImagesCount > 0}
-                    {foreach from=$allImages item=image}
-                        <div>
-                            <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
-                        </div>
-                    {/foreach}
-                {/if}
+                        {/foreach}
+                    {/if}
+                    {if $allImagesCount > 0}
+                        {foreach from=$allImages item=image}
+                            <div>
+                                <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
+                            </div>
+                        {/foreach}
+                    {/if}
+                </div>
             </div>
             <div class="d-block d-md-none">
                 <p class="label-zoom">Zoom : appuyer et glisser</p>
