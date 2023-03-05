@@ -119,8 +119,8 @@ $(document).ready(function () {
 
         $('#js-slick-product').slick({
             asNavFor: '.product-thumbs, .products-imagescover',
-            prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow d-none d-md-block"><i class="material-icons">chevron_left</i></button>',
-            nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow d-none d-md-block"><i class="material-icons">chevron_right</i></button>',
+            prevArrow: '<button type="button" class="btn btn-link slick-prev slick-arrow d-none d-md-flex"><i class="material-icons">chevron_left</i></button>',
+            nextArrow: '<button type="button" class="btn btn-link slick-next slick-arrow d-none d-md-flex"><i class="material-icons">chevron_right</i></button>',
             dots: false,
             infinite: true,
             speed: 300,
