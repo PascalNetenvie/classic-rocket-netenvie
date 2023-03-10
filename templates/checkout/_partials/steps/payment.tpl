@@ -71,7 +71,7 @@
                             {foreach from=$option.inputs item=input}
                                 <input type="{$input.type}" name="{$input.name}" value="{$input.value}">
                             {/foreach}
-                            <button style="display:none" id="pay-with-{$option.id}" type="button"></button>
+                            <button style="display:none" id="pay-with-{$option.id}" type="submit"></button>
                         </form>
                     {/if}
                 </div>
@@ -113,7 +113,7 @@
     <div id="payment-confirmation">
         <div class="ps-shown-by-js">
             <p class="text-center">
-                <button type="button" {if !$selected_payment_option} disabled {/if}
+                <button type="submit" {if !$selected_payment_option} disabled {/if}
                         class="btn btn-lg btn-primary center-block mt-3 text-uppercase">
                     {l s='Order with an obligation to pay' d='Shop.Theme.Checkout'}
                 </button>
