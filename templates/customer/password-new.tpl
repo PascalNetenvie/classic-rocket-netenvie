@@ -71,7 +71,7 @@
           <input type="hidden" name="id_customer" id="id_customer" value="{$id_customer}">
           <input type="hidden" name="reset_token" id="reset_token" value="{$reset_token}">
 
-          <button class="btn btn-primary" type="button" name="submit">
+          <button class="btn btn-primary" type="submit" name="submit">
             {l s='Change Password' d='Shop.Theme.Actions'}
           </button>
 
