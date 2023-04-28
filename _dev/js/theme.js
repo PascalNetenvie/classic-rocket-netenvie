@@ -147,7 +147,8 @@ $(document).ready(function () {
     function scrollToAnchor(anchor) {
         console.log(anchor);
         var target = $(anchor);
-        var scrollTop = target.offset().top - $('#header').height() - 40;
+        //var scrollTop = target.offset().top - $('#header').height() - 40;
+        var scrollTop = target.offset().top - $('#header').height();
         console.log('scrollTop : ' + scrollTop);
 
         $('html, body').animate({
