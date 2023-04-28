@@ -149,6 +149,7 @@ $(document).ready(function () {
         var target = $(anchor);
         var scrollTop = target.offset().top - $('#header').height() - 40;
         //var scrollTop = target.offset().top - $('#header').height();
+        console.log('header height: ' + $('#header').height());
         console.log('scrollTop : ' + scrollTop);
 
         $('html, body').animate({
@@ -206,6 +207,7 @@ $(document).ready(function () {
 
 
                         var scrollTop = target.offset().top - $('#header').height() - 40;
+                        console.log('header height: ' + $('#header').height());
                         console.log('scrollTop : ' + scrollTop);
 
                         $('html, body').animate({
