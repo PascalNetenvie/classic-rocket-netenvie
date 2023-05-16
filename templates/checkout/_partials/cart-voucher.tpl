@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                             </form>
-                        {/block}
+                        {/block} 
 
                         {block name='cart_voucher_notifications'}
                             <div class="alert alert-danger js-error promo-code-alert" role="alert">
