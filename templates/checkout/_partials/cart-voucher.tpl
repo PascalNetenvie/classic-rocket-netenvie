@@ -28,6 +28,7 @@
             <div class="cart-voucher">
                 {if $cart.vouchers.added}
                     {block name='cart_voucher_list'}
+                        <h3>{l s='Voucher code applied' d='Shop.Theme.Checkout'}</h3>
                         <ul class="promo-name">
                             {foreach from=$cart.vouchers.added item=voucher}
                                 <li class="cart-summary-line">
