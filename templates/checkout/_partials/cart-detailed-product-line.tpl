@@ -28,13 +28,13 @@
             {assign var='productimg' value=Image::getImages($language.id, $product.id, $product.id_product_attribute)}  
             {if isset($productimg[0])}
                 <img
-                    src = "{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'cart_default')}" alt="{$product.name|escape:'quotes'}"
-                    class="product-line__img" width="{$product.cover.bySize.cart_default.width}"
-                    height="{$product.cover.bySize.cart_default.height}">
+                    src = "{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'pdt_180')}" alt="{$product.name|escape:'quotes'}"
+                    class="product-line__img" width="{$product.cover.bySize.pdt_180.width}"
+                    height="{$product.cover.bySize.pdt_180.height}">
             {else}
-                <img src="{$product.cover.bySize.cart_default.url}" alt="{$product.name|escape:'quotes'}"
-                     class="product-line__img" width="{$product.cover.bySize.cart_default.width}"
-                     height="{$product.cover.bySize.cart_default.height}">
+                <img src="{$product.cover.bySize.pdt_180.url}" alt="{$product.name|escape:'quotes'}"
+                     class="product-line__img" width="{$product.cover.bySize.pdt_180.width}"
+                     height="{$product.cover.bySize.pdt_180.height}">
             {/if}
 
             <div class="media-body product-line__body">
