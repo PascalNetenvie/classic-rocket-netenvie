@@ -28,23 +28,20 @@
 {else} 
     {assign var='allImagesCount' value=0}   
 {/if}
-<div class="modal fade js-product-images-modal" id="product-modal">
+<div class="modal fade" id="product-modal">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header d-flex d-md-none">
-                <button type="button" class="prev-image-modal" aria-label="Previous">
+            <div class="modal-header">
+                <button type="button" class="prev-image-modal d-md-none" aria-label="Previous">
                     <i class="material-icons">chevron_leftt</i>
                 </button>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="material-icons">close</i>
                 </button>
-                <button type="button" class="next-image-modal" aria-label="Next">
+                <button type="button" class="next-image-modal d-md-none" aria-label="Next">
                     <i class="material-icons">chevron_right</i>
                 </button>
             </div>
-            <button type="button" class="close d-none d-md-block" data-dismiss="modal" aria-label="Close">
-                <i class="material-icons">close</i>
-            </button>
             <div class="modal-body">
                 <div id="js-slick-product">
                     {if isset($cover)}

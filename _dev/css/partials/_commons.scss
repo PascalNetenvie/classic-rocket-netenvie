@@ -1,26 +1,26 @@
 body{
-  background-color: $wrapper-bg;
-  padding-top: $header-height-mobile;
+    background-color: $wrapper-bg;
+    padding-top: $header-height-mobile;
 
-  @include media-breakpoint-desktop {
-    padding-top: $header-height;
-  }
+    @include media-breakpoint-desktop {
+        padding-top: $header-height;
+    }
 }
 [id]:not([id=""]) {
-  scroll-margin-top: $header-height-mobile;
+    scroll-margin-top: $header-height-mobile;
 
-  @include media-breakpoint-desktop {
-    scroll-margin-top: $header-height;
-  }
+    @include media-breakpoint-desktop {
+        scroll-margin-top: $header-height;
+    }
 }
 input, button, select, optgroup, textarea {
-  //font-family: $opensans-font;
+    //font-family: $opensans-font;
 }
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 h2, .h2 {
-  text-transform: none;
+    text-transform: none;
 }
 a{
     text-decoration: none;
@@ -135,9 +135,9 @@ sup{
     @include media-breakpoint-desktop {
         height: 38px;
     }
-  &.step-edit {
-    height: auto;
-  }
+    &.step-edit {
+        height: auto;
+    }
 }
 @media (prefers-reduced-motion: reduce) {
     .btn {
@@ -145,8 +145,8 @@ sup{
     }
 }
 .btn.disabled, .btn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
+    opacity: 0.45;
+    cursor: not-allowed;
 }
 
 .btn-primary {
@@ -252,6 +252,76 @@ sup{
 }
 
 /* FIN BOUTONS (NETENVIE) */
+
+/* MODAL (NETENVIE) */
+
+.modal {
+    .modal-dialog {
+        margin: 0.25rem auto;
+    }
+
+    .modal-header {
+        border-bottom: 0;
+        padding: 0;
+        background-color: $primary;
+        margin: 0 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-desktop {
+            display: block;
+            background-color: transparent;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 9;
+            margin: -6px -45px 0 0;
+        }
+
+        .prev-image-modal {
+        }
+
+        .next-image-modal {
+        }
+    }
+
+    .modal-header button, .close {
+        opacity: 1;
+        display: block;
+        text-shadow: 0 0 0;
+        border: 0;
+        background: transparent;
+        color: #fff;
+
+        @include media-breakpoint-desktop {
+            width: auto;
+            font-size: 2rem;
+            text-shadow: 0 0 5px #000;
+        }
+
+        i, span {
+            font-size: 3.5rem;
+            @include media-breakpoint-desktop {
+                font-size: 2.9rem;
+            }
+        }
+        span {
+            margin-right: 10px;
+            @include media-breakpoint-desktop {
+                margin-right: 0;
+            }
+        }
+
+        width: calc(33.33%);
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/* FIN MODAL (NETENVIE) */
 
 
 /* HEADER */
@@ -402,26 +472,27 @@ input[type="number"] {
     display: none;
 }
 .contact-rich {
-  @include media-breakpoint-mobile {
-    text-align: center;
-  }
+    @include media-breakpoint-mobile {
+        text-align: center;
+    }
 }
 
 .step-title {
-  margin-bottom: 0;
-  line-height: rem(26px);
+    margin-bottom: 0;
+    line-height: rem(26px);
 
-  i {
-    top: 4px;
-    position: relative;
-  }
+    i {
+        top: 4px;
+        position: relative;
+    }
 
-  @include media-breakpoint-mobile {
-    font-size: 0.9rem;
-  }
-  &.not-allowed {
-    margin-left: 20px;;
-  }
+    @include media-breakpoint-mobile {
+        font-size: 0.9rem;
+    }
+    &.not-allowed {
+        margin-left: 20px;
+        ;
+    }
 }
 .-complete.-reachable .step-title .done {
     display: inline-block;
@@ -435,9 +506,9 @@ input[type="number"] {
             visibility: hidden;
         }
     }
-  .btn {
-    display: none;
-  }
+    .btn {
+        display: none;
+    }
 }
 .card-body {
     padding: 1.25rem;
@@ -464,33 +535,33 @@ input[type="number"] {
 //Personnal info
 .nav-tabs-info {
 
-  @include media-breakpoint-mobile() {
-    font-size: 0.85rem;
-  }
-  .active {
-    font-weight: bold;
-  }
+    @include media-breakpoint-mobile() {
+        font-size: 0.85rem;
+    }
+    .active {
+        font-weight: bold;
+    }
 }
 
 //Résumé commande
 
 #order-summary-content {
-  .h4 {
-    margin: 1.5rem 0 10px;
-  }
-
-  .logo-container {
-    img {
-      max-height: 48px !important;
-      width: auto!important;
+    .h4 {
+        margin: 1.5rem 0 10px;
     }
-  }
 
-  table {
-    td {
-      vertical-align: middle;
+    .logo-container {
+        img {
+            max-height: 48px !important;
+            width: auto!important;
+        }
     }
-  }
+
+    table {
+        td {
+            vertical-align: middle;
+        }
+    }
 }
 
 //Addresses
@@ -516,23 +587,23 @@ input[type="number"] {
 // Shipping
 
 .delivery-option {
-  cursor: pointer;
-  padding: $spacer;
-  margin-bottom: $spacer;
-  background-color: $gray-200;
-  display: block;
+    cursor: pointer;
+    padding: $spacer;
+    margin-bottom: $spacer;
+    background-color: $gray-200;
+    display: block;
 
-  >.row {
-    align-items: center;
-  }
+    >.row {
+        align-items: center;
+    }
 }
 
 #js-delivery {
-  .delivery-option {
-    img {
-      max-width: 100% !important;
+    .delivery-option {
+        img {
+            max-width: 100% !important;
+        }
     }
-  }
 }
 .carrier-extra-content:not(:empty){
     margin-bottom: $spacer*2;
@@ -542,26 +613,26 @@ input[type="number"] {
 }
 
 .carrier-name {
-  font-weight: $font-weight-bold;
-  @include media-breakpoint-mobile {
-    font-size: 0.85rem ;
-    line-height: 1.25;
-  }
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-mobile {
+        font-size: 0.85rem ;
+        line-height: 1.25;
+    }
 }
 
 .carrier-delay {
-  @include media-breakpoint-mobile {
-    font-size: 0.85rem ;
-    line-height: 1.25;
-  }
+    @include media-breakpoint-mobile {
+        font-size: 0.85rem ;
+        line-height: 1.25;
+    }
 }
 .carrier-price {
-  font-weight: bold;
-  font-size: $font-size-lg;
-  color: $primary;
-  @include media-breakpoint-mobile {
-    font-size:  1.05rem;
-  }
+    font-weight: bold;
+    font-size: $font-size-lg;
+    color: $primary;
+    @include media-breakpoint-mobile {
+        font-size:  1.05rem;
+    }
 }
 
 //order list final recap
@@ -573,13 +644,13 @@ input[type="number"] {
     border: 3px solid $card-border-color;
 }
 .payment-option {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .addresshead {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 #content-checkout-payment-step .alert-info {
-  padding: 3px 10px;
+    padding: 3px 10px;
 }
 
 
