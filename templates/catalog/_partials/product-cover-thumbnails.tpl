@@ -43,13 +43,13 @@
                     <div class="">
                         <img
                             class="thumb js-thumb img-fluid"
-                            src="{$defaultIimage.bySize.small_default.url}"
+                            src="{$defaultIimage.bySize.pdt_100.url}"
                             alt="{$defaultIimage.legend}" title="{$defaultIimage.legend}"
-                            width="{$product.cover.bySize.small_default.width}"
-                            height="{$product.cover.bySize.small_default.height}"
+                            width="{$product.cover.bySize.pdt_100.width}"
+                            height="{$product.cover.bySize.pdt_100.height}"
                             >
                         <noscript>
-                        <img class="img-fluid" src="{$defaultIimage.bySize.small_default.url}" alt="{$defaultIimage.legend}">
+                        <img class="img-fluid" src="{$defaultIimage.bySize.pdt_100.url}" alt="{$defaultIimage.legend}">
                         </noscript>
                     </div>
                 </div>
@@ -60,14 +60,14 @@
                             <div class="rc">
                                 <img
                                     class="thumb js-thumb lazyload img-fluid"
-                                    data-src="{$image.bySize.small_default.url}"
+                                    data-src="{$image.bySize.pdt_100.url}"
                                     alt="{$image.legend}"
                                     title="{$image.legend}"
-                                    width="{$product.cover.bySize.small_default.width}"
-                                    height="{$product.cover.bySize.small_default.height}"
+                                    width="{$product.cover.bySize.pdt_100.width}"
+                                    height="{$product.cover.bySize.pdt_100.height}"
                                     >
                                 <noscript>
-                                <img class="img-fluid" src="{$image.bySize.small_default.url}" alt="{$image.legend}">
+                                <img class="img-fluid" src="{$image.bySize.pdt_100.url}" alt="{$image.legend}">
                                 </noscript>
                             </div>
                         </div>
@@ -81,14 +81,14 @@
                                 <div class="rc">
                                     <img
                                         class="thumb js-thumb lazyload img-fluid"
-                                        data-src="{$image.bySize.small_default.url}"
+                                        data-src="{$image.bySize.pdt_100.url}"
                                         alt="{$image.legend}"
                                         title="{$image.legend}"
-                                        width="{$product.cover.bySize.small_default.width}"
-                                        height="{$product.cover.bySize.small_default.height}"
+                                        width="{$product.cover.bySize.pdt_100.width}"
+                                        height="{$product.cover.bySize.pdt_100.height}"
                                         >
                                     <noscript>
-                                    <img class="img-fluid" src="{$image.bySize.small_default.url}" alt="{$image.legend}">
+                                    <img class="img-fluid" src="{$image.bySize.pdt_100.url}" alt="{$image.legend}">
                                     </noscript>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                         {if $defaultIimage}
                             <img class="img-fluid"
                                  srcset="{$defaultIimage.bySize.pdt_540.url} 680w,{$defaultIimage.bySize.pdt_360.url} 360w"
-                                 src="{$defaultIimage.bySize.medium_default.url}"
+                                 src="{$defaultIimage.bySize.pdt_300.url}"
                                  alt="{$defaultIimage.legend}" title="{$defaultIimage.legend}"
                                  sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
                                  width="320"
@@ -125,7 +125,7 @@
                             <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                         <noscript>
-                        <img class="img-fluid" src="{$defaultIimage.bySize.medium_default.url}" alt="{$defaultIimage.legend}">
+                        <img class="img-fluid" src="{$defaultIimage.bySize.pdt_300.url}" alt="{$defaultIimage.legend}">
                         </noscript>
                     </div>
                     <button data-id-image="{$defaultIimage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
@@ -142,7 +142,7 @@
                                     class="img-fluid lazyload"
                                     {if !$smarty.foreach.images.first && !$defaultIimage}data-sizes="auto"{/if}
                                     {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
-                                    {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.medium_default.url}"
+                                    {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.pdt_300.url}"
                                     alt="{$image.legend}"
                                     title="{$image.legend}"
                                     sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
@@ -150,7 +150,7 @@
                                     height="320"
                                     >
                                 <noscript>
-                                <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
+                                <img class="img-fluid" src="{$image.bySize.pdt_300.url}" alt="{$image.legend}">
                                 </noscript>
                             </div>
                             <button data-id-image="{$image.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
@@ -171,7 +171,7 @@
                                         class="img-fluid lazyload"
                                         {if !$smarty.foreach.images.first && !$defaultIimage}data-sizes="auto"{/if}
                                         {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
-                                        {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.medium_default.url}"
+                                        {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.pdt_300.url}"
                                         alt="{$image.legend}"
                                         title="{$image.legend}"
                                         sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
@@ -179,7 +179,7 @@
                                         height="320"
                                         >
                                     <noscript>
-                                    <img class="img-fluid" src="{$image.bySize.medium_default.url}" alt="{$image.legend}">
+                                    <img class="img-fluid" src="{$image.bySize.pdt_300.url}" alt="{$image.legend}">
                                     </noscript>
                                 </div>
                                 <button data-id-image="{$image.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
