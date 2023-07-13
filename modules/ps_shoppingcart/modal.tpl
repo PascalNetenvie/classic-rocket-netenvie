@@ -39,7 +39,7 @@
                             {assign var='productimg' value=Image::getImages($language.id, $product.id, $product.id_product_attribute)}  
             {if isset($productimg[0])}
                            
-              <img class="product-image modal-cart__image" src="{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'medium_default')}" alt="{$product.cover.legend}" width="{$product.cover.medium.width}" height="{$product.cover.medium.height}">
+              <img class="product-image modal-cart__image" src="{$link->getImageLink($product.link_rewrite,$product.id_product|cat:"-"|cat:$productimg[0].id_image, 'pdt_300')}" alt="{$product.cover.legend}" width="{$product.cover.medium.width}" height="{$product.cover.medium.height}">
              
             {else}
                    
