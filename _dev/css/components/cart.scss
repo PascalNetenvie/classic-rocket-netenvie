@@ -43,6 +43,7 @@
 }
 .product-line__img{
   margin-right: $spacer;
+  width: 100px;
 }
 @include media-breakpoint-mobile {
   .product-line__img{
