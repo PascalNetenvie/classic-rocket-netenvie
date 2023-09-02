@@ -50,7 +50,7 @@
             {l s='Attachments' d='Shop.Theme.Catalog'}
         </a>
         <div id="content-attachments" class="collapse" aria-labelledby="heading-attachments" data-parent="#tabs-product">
-            <div class="card-body" id="attachments">
+            <div class="card-body">
                 <section class="product-attachments">
                     <p class="h4 product__download">{l s='Download' d='Shop.Theme.Actions'}</p>
                     {foreach from=$product.attachments item=attachment}
