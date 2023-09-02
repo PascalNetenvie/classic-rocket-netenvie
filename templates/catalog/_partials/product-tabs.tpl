@@ -74,7 +74,13 @@
         {/if}
 
         {block name='product_details'}
-            {include file='catalog/_partials/product-details.tpl'}
+            <div class="tab-pane fade{if !$product.description} show active{/if}"
+                 id="product-details"
+                 data-product="{$product.embedded_attributes|json_encode}"
+                 role="tabpanel"
+                 >
+                {include file='catalog/_partials/product-details.tpl'}
+            </div>
         {/block}
 
         {block name='product_attachments'}
