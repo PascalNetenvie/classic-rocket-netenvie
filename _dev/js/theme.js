@@ -125,17 +125,29 @@ $(document).ready(function () {
     }
 
     function sticky() {
+        console.log('sticky');
         var yourNavigation = $("#header");
         var stickyDiv = "sticky";
         var unStickyDiv = "unsticky";
         var yourHeader = $('#header').height();
         $(window).scroll(function () {
-            if ($(this).scrollTop() > (yourHeader)) {
+            if ($(this).scrollTop() > 0) {
                 yourNavigation.addClass(stickyDiv).removeClass(unStickyDiv);
-            } else if ($(this).scrollTop() < (yourHeader)) {
+                $('body').css('padding-top', yourHeader);
+            } else {
                 yourNavigation.addClass(unStickyDiv).removeClass(stickyDiv);
+                $('body').css('padding-top', 0);
             }
         });
+        /*
+         var yourHeader = $('#header').height();
+         $(window).scroll(function () {
+         if ($(this).scrollTop() > (yourHeader)) {
+         yourNavigation.addClass(stickyDiv).removeClass(unStickyDiv);
+         } else if ($(this).scrollTop() < (yourHeader)) {
+         yourNavigation.addClass(unStickyDiv).removeClass(stickyDiv);
+         }
+         });*/
     }
 
     function MobileMenuOk() {

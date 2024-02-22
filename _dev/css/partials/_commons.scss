@@ -1,10 +1,5 @@
 body{
     background-color: $wrapper-bg;
-    padding-top: $header-height-mobile;
-
-    @include media-breakpoint-desktop {
-        padding-top: $header-height;
-    }
 }
 [id]:not([id=""]) {
     scroll-margin-top: $header-height-mobile;
