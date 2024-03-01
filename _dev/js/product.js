@@ -141,6 +141,17 @@ $(document).ready(function () {
          
          });*/
 
+        $('.btn-zoom').on('click', function () {
+            console.log('btn-zoom click');
+           idImage = $(this).data('id-image');
+           numImage = $(this).data('num-image');
+           numSlide = $(this).parent().data('slick-index');
+            $('#js-slick-product').slick('slickGoTo', numSlide);
+            console.log('numImage : ' + numImage);
+            console.log('numSlide : ' + numSlide);
+            /*  $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+             $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');*/
+        });
     }
 
     function createInputFile()
@@ -189,17 +200,6 @@ $(document).on('shown.bs.modal', '#product-modal', function (e) {
     $('#js-slick-product').resize();
 });
 
-$(document).on('click', '.btn-zoom', function () {
-    console.log('btn-zoom click');
-   idImage = $(this).data('id-image');
-   numImage = $(this).data('num-image');
-   numSlide = $(this).parent().data('slick-index');
-    $('#js-slick-product').slick('slickGoTo', numSlide);
-    console.log('numImage : ' + numImage);
-    console.log('numSlide : ' + numSlide);
-    /*  $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-     $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');*/
-});
 
 $(document).on('click', '.next-image-modal', function (e) {
     console.log('next-image-modal click');

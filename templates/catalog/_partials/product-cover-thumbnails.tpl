@@ -214,9 +214,15 @@
                 </div>
                 <div class="modal-body">
                     <div id="js-slick-product">
-                            
+
                         <div>
-                            <img id="image-{$defaultImage.id_image}" data-src="{$defaultImage.large.url}" class="img-fluid lazyload" width="{$defaultImage.large.width}" alt="{$defaultImage.legend}" title="{$defaultImage.legend}" />
+                            {if $defaultImage}
+                                <img id="image-{$defaultImage.id_image}" data-src="{$defaultImage.large.url}" class="img-fluid lazyload" width="{$defaultImage.large.width}" alt="{$defaultImage.legend}" title="{$defaultImage.legend}" />
+                            {elseif isset($urls.no_picture_image)}
+                                <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}" />
+                            {else}
+                                <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" />
+                            {/if}
                         </div>
 
                         {foreach from=$product.images item=image}
