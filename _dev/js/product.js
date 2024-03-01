@@ -192,8 +192,10 @@ $(document).on('click', '.btn-zoom', function () {
     console.log('btn-zoom click');
     idImage = $(this).data('id-image');
     numImage = $(this).data('num-image');
-    $('#js-slick-product').slick('slickGoTo', numImage);
+    numSlide = $(this).parent().data('slick-index');
+    $('#js-slick-product').slick('slickGoTo', numSlide);
     console.log('numImage : ' + numImage);
+    console.log('numSlide : ' + numSlide);
     /*  $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
      $("#product-modal img#image-" + idImage).removeClass('d-none').addClass('current');*/
 });
