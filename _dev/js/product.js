@@ -146,9 +146,6 @@ $(document).ready(function () {
             idImage = $(this).data('id-image');
             numImage = $(this).data('num-image');
             numSlide = $(this).parent().data('slick-index');
-            if (numSlide == 'undefined') {
-                numSlide = $(this).parent().parent().data('slick-index');
-            }
             $('#js-slick-product').slick('slickGoTo', numSlide);
             console.log('numImage : ' + numImage);
             console.log('numSlide : ' + numSlide);
