@@ -29,17 +29,15 @@
     <section id="main">
         <div class="row">
             <div class="col-lg-6">
-				<p class="d-block d-md-none text-center backtocat">
-					<span class="pointer" onclick="document.location=document.referrer ? document.referrer+'#{$product->link_rewrite}' : '{$link->getCategoryLink({$product->id_category_default})}#{$product->link_rewrite}';">Retour à la liste</a>
-				</p>
+                <p class="d-block d-md-none text-center backtocat">
+                    <span class="pointer" onclick="document.location = document.referrer ? document.referrer + '#{$product->link_rewrite}' : '{$link->getCategoryLink({$product->id_category_default})}#{$product->link_rewrite}';">Retour à la liste</a>
+                </p>
                 {block name='page_content_container'}
                     <section class="page-content--product" id="content">
                         {block name='page_content'}
-
                             {block name='product_cover_thumbnails'}
                                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                             {/block}
-
                         {/block}
                     </section>
                 {/block}
@@ -145,10 +143,6 @@
 
         {block name='product_footer'}
             {hook h='displayFooterProduct' product=$product category=$category}
-        {/block}
-
-        {block name='product_images_modal'}
-            {include file='catalog/_partials/product-images-modal.tpl'}
         {/block}
 
         {block name='page_footer_container'}
