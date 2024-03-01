@@ -134,12 +134,12 @@ $(document).ready(function () {
 
         // On before slide change
         /*
-        $('#js-slick-product').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            console.log(nextSlide);
-            //$('.products-imagescover').slick('slickGoTo', nextSlide);
-            //$('.product-thumbs').slick('slickGoTo', nextSlide);
-
-        });*/
+         $('#js-slick-product').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+         console.log(nextSlide);
+         //$('.products-imagescover').slick('slickGoTo', nextSlide);
+         //$('.product-thumbs').slick('slickGoTo', nextSlide);
+         
+         });*/
 
     }
 
@@ -179,6 +179,7 @@ $(document).ready(function () {
 
 var idImage = 0;
 var numImage = 0;
+var numSlide = 0;
 
 
 
@@ -190,10 +191,10 @@ $(document).on('shown.bs.modal', '#product-modal', function (e) {
 
 $(document).on('click', '.btn-zoom', function () {
     console.log('btn-zoom click');
-    idImage = $(this).data('id-image');
-    numImage = $(this).data('num-image');
-    numSlide = $(this).parent().data('slick-index');
-    $('#js-slick-product').slick('slickGoTo', numSlide-1);
+   idImage = $(this).data('id-image');
+   numImage = $(this).data('num-image');
+   numSlide = $(this).parent().data('slick-index');
+    $('#js-slick-product').slick('slickGoTo', numSlide);
     console.log('numImage : ' + numImage);
     console.log('numSlide : ' + numSlide);
     /*  $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
@@ -203,47 +204,47 @@ $(document).on('click', '.btn-zoom', function () {
 $(document).on('click', '.next-image-modal', function (e) {
     console.log('next-image-modal click');
     $('#js-slick-product').slick('slickNext');
-    
+
     /*
-    var current = false;
-    var find = false;
-    var next = false;
-    var el = false;
-    $("#product-modal img.img-fluid").each(function (i) {
-        el = $(this);
-        if (current && !find) {
-            find = true;
-            next = el;
-        }
-        if ($(this).hasClass('current')) {
-            //console.log('find');
-            current = true;
-        }
-    });
-    if (!next) {
-        next = $("#product-modal img.img-fluid").first();
-    }
-    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-    next.removeClass('d-none').addClass('current');
-    */
+     var current = false;
+     var find = false;
+     var next = false;
+     var el = false;
+     $("#product-modal img.img-fluid").each(function (i) {
+     el = $(this);
+     if (current && !find) {
+     find = true;
+     next = el;
+     }
+     if ($(this).hasClass('current')) {
+     //console.log('find');
+     current = true;
+     }
+     });
+     if (!next) {
+     next = $("#product-modal img.img-fluid").first();
+     }
+     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+     next.removeClass('d-none').addClass('current');
+     */
 });
 $(document).on('click', '.prev-image-modal', function (e) {
     console.log('prev-image-modal click');
     $('#js-slick-product').slick('slickPrev');
-/*
-    var current = false;
-    var find = false;
-    var prev = false;
-    var el = $("#product-modal img.img-fluid").last();
-    $("#product-modal img.img-fluid").each(function (i) {
-        if ($(this).hasClass('current')) {
-            prev = el;
-        }
-        el = $(this);
-    });
-    $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-    prev.removeClass('d-none').addClass('current');
-    */
+    /*
+     var current = false;
+     var find = false;
+     var prev = false;
+     var el = $("#product-modal img.img-fluid").last();
+     $("#product-modal img.img-fluid").each(function (i) {
+     if ($(this).hasClass('current')) {
+     prev = el;
+     }
+     el = $(this);
+     });
+     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
+     prev.removeClass('d-none').addClass('current');
+     */
 });
 /*
  $(document).on('shown.bs.modal', '#product-modal', function (e) {

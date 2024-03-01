@@ -25,9 +25,9 @@
 
 {assign var='numImage' value=0}
 {if isset($cover)}
-    {assign var='defaultIimage' value=$cover}   
+    {assign var='defaultImage' value=$cover}   
 {else} 
-    {assign var='defaultIimage' value=$product.default_image}   
+    {assign var='defaultImage' value=$product.default_image}   
 {/if}
 
 {if isset($allImages)}
@@ -43,19 +43,19 @@
                     <div class="">
                         <img
                             class="thumb js-thumb img-fluid"
-                            src="{$defaultIimage.bySize.pdt_100.url}"
-                            alt="{$defaultIimage.legend}" title="{$defaultIimage.legend}"
+                            src="{$defaultImage.bySize.pdt_100.url}"
+                            alt="{$defaultImage.legend}" title="{$defaultImage.legend}"
                             width="{$product.cover.bySize.pdt_100.width}"
                             height="{$product.cover.bySize.pdt_100.height}"
                             >
                         <noscript>
-                        <img class="img-fluid" src="{$defaultIimage.bySize.pdt_100.url}" alt="{$defaultIimage.legend}">
+                        <img class="img-fluid" src="{$defaultImage.bySize.pdt_100.url}" alt="{$defaultImage.legend}">
                         </noscript>
                     </div>
                 </div>
 
                 {foreach from=$product.images item=image}
-                    {if $image.id_image != $defaultIimage.id_image}
+                    {if $image.id_image != $defaultImage.id_image}
                         <div class="product-thumb" id-image="{$image.id_image}">
                             <div class="rc">
                                 <img
@@ -76,7 +76,7 @@
 
                 {if $allImagesCount > 0}
                     {foreach from=$allImages item=image}
-                        {if $image.id_image != $defaultIimage.id_image}
+                        {if $image.id_image != $defaultImage.id_image}
                             <div class="product-thumb all" id-image="{$image.id_image}">
                                 <div class="rc">
                                     <img
@@ -110,39 +110,39 @@
 
                 <div class="product-img thumbnail-container">
                     <div class="">
-                        {if $defaultIimage}
+                        {if $defaultImage}
                             <img class="img-fluid"
-                                 srcset="{$defaultIimage.bySize.pdt_540.url} 680w,{$defaultIimage.bySize.pdt_360.url} 360w"
-                                 src="{$defaultIimage.bySize.pdt_300.url}"
-                                 alt="{$defaultIimage.legend}" title="{$defaultIimage.legend}"
+                                 srcset="{$defaultImage.bySize.pdt_540.url} 680w,{$defaultImage.bySize.pdt_360.url} 360w"
+                                 src="{$defaultImage.bySize.pdt_300.url}"
+                                 alt="{$defaultImage.legend}" title="{$defaultImage.legend}"
                                  sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
                                  width="320"
                                  height="320"
-                                 alt="{$defaultIimage.legend}" title="{$defaultIimage.legend}">
+                                 alt="{$defaultImage.legend}" title="{$defaultImage.legend}">
                         {elseif isset($urls.no_picture_image)}
                             <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
                         {else}
                             <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                         <noscript>
-                        <img class="img-fluid" src="{$defaultIimage.bySize.pdt_300.url}" alt="{$defaultIimage.legend}">
+                        <img class="img-fluid" src="{$defaultImage.bySize.pdt_300.url}" alt="{$defaultImage.legend}">
                         </noscript>
                     </div>
-                    <button data-id-image="{$defaultIimage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                    <button data-id-image="{$defaultImage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
                         <i class="material-icons zoom-in">&#xE8FF;</i>
                     </button>
                 </div>
 
                 {foreach from=$product.images item=image   name="images"}
-                    {if $image.id_image != $defaultIimage.id_image}
+                    {if $image.id_image != $defaultImage.id_image}
                         {$numImage = $numImage +1}
                         <div class="product-img" id-image="{$image.id_image}">
                             <div class="rc">
                                 <img
                                     class="img-fluid lazyload"
-                                    {if !$smarty.foreach.images.first && !$defaultIimage}data-sizes="auto"{/if}
-                                    {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
-                                    {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.pdt_300.url}"
+                                    {if !$smarty.foreach.images.first && !$defaultImage}data-sizes="auto"{/if}
+                                    {if !$smarty.foreach.images.first && !$defaultImage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
+                                    {if !$smarty.foreach.images.first && !$defaultImage}data-{/if}src="{$image.bySize.pdt_300.url}"
                                     alt="{$image.legend}"
                                     title="{$image.legend}"
                                     sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
@@ -162,16 +162,16 @@
 
                 {if $allImagesCount > 0}
                     {foreach from=$allImages item=image   name="images"}
-                        {if $image.id_image != $defaultIimage.id_image}
+                        {if $image.id_image != $defaultImage.id_image}
                             {$numImage = $numImage +1}
 
                             <div class="product-img all" id-image="{$image.id_image}">
                                 <div class="rc">
                                     <img
                                         class="img-fluid lazyload"
-                                        {if !$smarty.foreach.images.first && !$defaultIimage}data-sizes="auto"{/if}
-                                        {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
-                                        {if !$smarty.foreach.images.first && !$defaultIimage}data-{/if}src="{$image.bySize.pdt_300.url}"
+                                        {if !$smarty.foreach.images.first && !$defaultImage}data-sizes="auto"{/if}
+                                        {if !$smarty.foreach.images.first && !$defaultImage}data-{/if}srcset="{$image.bySize.pdt_540.url} 680w,{$image.bySize.pdt_360.url} 360w"
+                                        {if !$smarty.foreach.images.first && !$defaultImage}data-{/if}src="{$image.bySize.pdt_300.url}"
                                         alt="{$image.legend}"
                                         title="{$image.legend}"
                                         sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
@@ -195,11 +195,53 @@
         </div>
     {/block}
 
-
     {hook h='displayAfterProductThumbs'}
+
+
+    <div class="modal fade" id="product-modal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="prev-image-modal d-md-none" aria-label="Previous">
+                        <i class="material-icons">chevron_leftt</i>
+                    </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">close</i>
+                    </button>
+                    <button type="button" class="next-image-modal d-md-none" aria-label="Next">
+                        <i class="material-icons">chevron_right</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="js-slick-product">
+                            
+                        <div>
+                            <img id="image-{$defaultImage.id_image}" data-src="{$defaultImage.large.url}" class="img-fluid lazyload" width="{$defaultImage.large.width}" alt="{$defaultImage.legend}" title="{$defaultImage.legend}" />
+                        </div>
+
+                        {foreach from=$product.images item=image}
+                            {if $image.id_image != $defaultImage.id_image}
+                                <div>
+                                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
+                                </div>
+                            {/if}
+                        {/foreach}
+
+                        {if $allImagesCount > 0}
+                            {foreach from=$allImages item=image}
+                                {if $image.id_image != $defaultImage.id_image}
+                                    <div>
+                                        <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
+                                    </div>
+                                {/if}
+                            {/foreach}
+                        {/if}
+                    </div>
+                </div>
+                <div class="d-block d-md-none">
+                    <p class="label-zoom">Zoom : appuyer et glisser</p>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </div>
-
-
-                            {block name='product_images_modal'}
-                                {include file='catalog/_partials/product-images-modal.tpl'}
-                            {/block}
