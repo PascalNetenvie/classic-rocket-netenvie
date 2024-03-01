@@ -143,9 +143,12 @@ $(document).ready(function () {
 
         $('.btn-zoom').on('click', function () {
             console.log('btn-zoom click');
-           idImage = $(this).data('id-image');
-           numImage = $(this).data('num-image');
-           numSlide = $(this).parent().data('slick-index');
+            idImage = $(this).data('id-image');
+            numImage = $(this).data('num-image');
+            numSlide = $(this).parent().data('slick-index');
+            if (numSlide == 'undefined') {
+                numSlide = $(this).parent().parent().data('slick-index');
+            }
             $('#js-slick-product').slick('slickGoTo', numSlide);
             console.log('numImage : ' + numImage);
             console.log('numSlide : ' + numSlide);
