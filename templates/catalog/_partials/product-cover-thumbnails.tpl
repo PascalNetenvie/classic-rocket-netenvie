@@ -104,26 +104,26 @@
             {/block}
             <div class="products-imagescover mb-2" data-count="{$product.images|count + $allImagesCount}">
 
-                <div class="product-img thumbnail-container">
-                    <div class="">
-                        {if $defaultImage}
-                            <img class="img-fluid"
-                                 srcset="{$defaultImage.bySize.pdt_540.url} 680w,{$defaultImage.bySize.pdt_360.url} 360w"
-                                 src="{$defaultImage.bySize.pdt_300.url}"
-                                 alt="{$defaultImage.legend}" title="{$defaultImage.legend}"
-                                 sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
-                                 width="320"
-                                 height="320"
-                                 alt="{$defaultImage.legend}" title="{$defaultImage.legend}">
-                        {/if}
-                        <noscript>
-                        <img class="img-fluid" src="{$defaultImage.bySize.pdt_300.url}" alt="{$defaultImage.legend}">
-                        </noscript>
+                {if $defaultImage}
+                    <div class="product-img thumbnail-container">
+                        <div class="">
+                                <img class="img-fluid"
+                                     srcset="{$defaultImage.bySize.pdt_540.url} 680w,{$defaultImage.bySize.pdt_360.url} 360w"
+                                     src="{$defaultImage.bySize.pdt_300.url}"
+                                     alt="{$defaultImage.legend}" title="{$defaultImage.legend}"
+                                     sizes="(min-width: 768px) 680px, (max-width: 767px) 320px"
+                                     width="320"
+                                     height="320"
+                                     alt="{$defaultImage.legend}" title="{$defaultImage.legend}">
+                            <noscript>
+                            <img class="img-fluid" src="{$defaultImage.bySize.pdt_300.url}" alt="{$defaultImage.legend}">
+                            </noscript>
+                        </div>
+                        <button data-id-image="{$defaultImage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
+                            <i class="material-icons zoom-in">&#xE8FF;</i>
+                        </button>
                     </div>
-                    <button data-id-image="{$defaultImage.id_image}" data-num-image="{$numImage}" type="button" class="btn btn-link btn-zoom product-layer-zoom" data-toggle="modal" data-target="#product-modal">
-                        <i class="material-icons zoom-in">&#xE8FF;</i>
-                    </button>
-                </div>
+                {/if}
 
                 {foreach from=$product.images item=image   name="images"}
                     {if $image.id_image != $defaultImage.id_image}
@@ -188,54 +188,4 @@
     {/block}
 
     {hook h='displayAfterProductThumbs'}
-
-
-    <div class="modal fade" id="product-modal">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="prev-image-modal d-md-none" aria-label="Previous">
-                        <i class="material-icons">chevron_leftt</i>
-                    </button>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="material-icons">close</i>
-                    </button>
-                    <button type="button" class="next-image-modal d-md-none" aria-label="Next">
-                        <i class="material-icons">chevron_right</i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div id="js-slick-product">
-
-                        <div>
-                            {if $defaultImage}
-                                <img id="image-{$defaultImage.id_image}" data-src="{$defaultImage.large.url}" class="img-fluid lazyload" width="{$defaultImage.large.width}" alt="{$defaultImage.legend}" title="{$defaultImage.legend}" />
-                            {/if}
-                        </div>
-
-                        {foreach from=$product.images item=image}
-                            {if $image.id_image != $defaultImage.id_image}
-                                <div>
-                                    <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
-                                </div>
-                            {/if}
-                        {/foreach}
-
-                        {if $allImagesCount > 0}
-                            {foreach from=$allImages item=image}
-                                {if $image.id_image != $defaultImage.id_image}
-                                    <div>
-                                        <img id="image-{$image.id_image}" data-src="{$image.large.url}" class="img-fluid lazyload" width="{$image.large.width}" alt="{$image.legend}" title="{$image.legend}" />
-                                    </div>
-                                {/if}
-                            {/foreach}
-                        {/if}
-                    </div>
-                </div>
-                <div class="d-block d-md-none">
-                    <p class="label-zoom">Zoom : appuyer et glisser</p>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 </div>
