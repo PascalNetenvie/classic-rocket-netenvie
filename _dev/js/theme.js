@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     console.log('ready');
     /* SCROLL TO ANCHOR */
-    if (window.location.hash) {
+    if (window.location.hash && window.location.hash[1] != '/') {
         scrollToAnchor(window.location.hash);
     }
 

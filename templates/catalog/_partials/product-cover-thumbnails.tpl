@@ -24,11 +24,7 @@
 *}
 
 {assign var='numImage' value=0}
-{if isset($cover)}
-    {assign var='defaultImage' value=$cover}   
-{else} 
-    {assign var='defaultImage' value=$product.default_image}   
-{/if}
+{assign var='defaultImage' value=$product.default_image}   
 
 {if isset($allImages)}
     {assign var='allImagesCount' value=$allImages|count }   
@@ -119,10 +115,6 @@
                                  width="320"
                                  height="320"
                                  alt="{$defaultImage.legend}" title="{$defaultImage.legend}">
-                        {elseif isset($urls.no_picture_image)}
-                            <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}">
-                        {else}
-                            <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==">
                         {/if}
                         <noscript>
                         <img class="img-fluid" src="{$defaultImage.bySize.pdt_300.url}" alt="{$defaultImage.legend}">
@@ -218,10 +210,6 @@
                         <div>
                             {if $defaultImage}
                                 <img id="image-{$defaultImage.id_image}" data-src="{$defaultImage.large.url}" class="img-fluid lazyload" width="{$defaultImage.large.width}" alt="{$defaultImage.legend}" title="{$defaultImage.legend}" />
-                            {elseif isset($urls.no_picture_image)}
-                                <img class="img-fluid" src="{$urls.no_picture_image.bySize.large_default.url}" />
-                            {else}
-                                <img src = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" />
                             {/if}
                         </div>
 

@@ -200,57 +200,16 @@ $(document).on('shown.bs.modal', '#product-modal', function (e) {
     $('#js-slick-product').resize();
 });
 
-
 $(document).on('click', '.next-image-modal', function (e) {
     console.log('next-image-modal click');
     $('#js-slick-product').slick('slickNext');
-
-    /*
-     var current = false;
-     var find = false;
-     var next = false;
-     var el = false;
-     $("#product-modal img.img-fluid").each(function (i) {
-     el = $(this);
-     if (current && !find) {
-     find = true;
-     next = el;
-     }
-     if ($(this).hasClass('current')) {
-     //console.log('find');
-     current = true;
-     }
-     });
-     if (!next) {
-     next = $("#product-modal img.img-fluid").first();
-     }
-     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-     next.removeClass('d-none').addClass('current');
-     */
 });
+
 $(document).on('click', '.prev-image-modal', function (e) {
     console.log('prev-image-modal click');
     $('#js-slick-product').slick('slickPrev');
-    /*
-     var current = false;
-     var find = false;
-     var prev = false;
-     var el = $("#product-modal img.img-fluid").last();
-     $("#product-modal img.img-fluid").each(function (i) {
-     if ($(this).hasClass('current')) {
-     prev = el;
-     }
-     el = $(this);
-     });
-     $("#product-modal img.img-fluid").addClass('d-none').removeClass('current');
-     prev.removeClass('d-none').addClass('current');
-     */
 });
-/*
- $(document).on('shown.bs.modal', '#product-modal', function (e) {
- $('#js-slick-product').resize();
- });
- */
+
 //add to cart loader
 $(document).on('click', '.js-add-to-cart:enabled:not(.is--loading)', function () {
     $(this).addClass('is--loading').attr("disabled", true);
